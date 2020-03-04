@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE messagebundle [
+<!ELEMENT messagebundle (msg)*>
+<!ATTLIST messagebundle class CDATA #IMPLIED>
+
+<!ELEMENT msg (#PCDATA|ph|source)*>
+<!ATTLIST msg id CDATA #IMPLIED>
+<!ATTLIST msg seq CDATA #IMPLIED>
+<!ATTLIST msg name CDATA #IMPLIED>
+<!ATTLIST msg desc CDATA #IMPLIED>
+<!ATTLIST msg meaning CDATA #IMPLIED>
+<!ATTLIST msg obsolete (obsolete) #IMPLIED>
+<!ATTLIST msg xml:space (default|preserve) "default">
+<!ATTLIST msg is_hidden CDATA #IMPLIED>
+
+<!ELEMENT source (#PCDATA)>
+
+<!ELEMENT ph (#PCDATA|ex)*>
+<!ATTLIST ph name CDATA #REQUIRED>
+
+<!ELEMENT ex (#PCDATA)>
+]>
+<messagebundle>
+  <msg id="AppComponent:home" desc="Text of the link to the home screen"><source>app/app.component.html:2</source>Home</msg>
+  <msg id="AppComponent:book" desc="Text of the link to the books screen"><source>app/app.component.html:3</source>Bücher</msg>
+  <msg id="AppComponent:admin" desc="Text of the link to the admin screen"><source>app/app.component.html:4</source>Administration</msg>
+  <msg id="HomeComponent:header"><source>app/home/home.component.html:1</source>Home</msg>
+  <msg id="HomeComponent:tagline" desc="a proud sentence about the project"><source>app/home/home.component.html:2</source>Das ist der BookMonkey.</msg>
+  <msg id="HomeComponent:book list link" desc="Text of the link to the books screen"><source>app/home/home.component.html:4</source>Buchliste ansehen</msg>
+  <msg id="HomeComponent:search"><source>app/home/home.component.html:8</source>Suche</msg>
+  <msg id="BookFormComponent:book form"><source>app/admin/create-book/create-book.component.html:1</source><source>app/admin/edit-book/edit-book.component.html:1</source>Buch hinzufügen</msg>
+  <msg id="BookFormComponent:book title"><source>app/admin/book-form/book-form.component.html:5</source>Buchtitel</msg>
+  <msg id="BookFormComponent:book subtitle"><source>app/admin/book-form/book-form.component.html:12</source>Untertitel</msg>
+  <msg id="BookFormComponent:book isbn"><source>app/admin/book-form/book-form.component.html:15</source>ISBN</msg>
+  <msg id="BookFormComponent:book published date"><source>app/admin/book-form/book-form.component.html:22</source>Erscheinungsdatum</msg>
+  <msg id="BookFormComponent:book authors"><source>app/admin/book-form/book-form.component.html:31</source>Autoren</msg>
+  <msg id="BookFormComponent:add author"><source>app/admin/book-form/book-form.component.html:34,36</source>
+    + Autor
+  </msg>
+  <msg id="BookFormComponent:author placeholder"><source>app/admin/book-form/book-form.component.html:40</source>Autor</msg>
+  <msg id="BookFormComponent:book description"><source>app/admin/book-form/book-form.component.html:50</source>Beschreibung</msg>
+  <msg id="BookFormComponent:book thumbnails"><source>app/admin/book-form/book-form.component.html:53</source>Bilder</msg>
+  <msg id="BookFormComponent:add thumbnail"><source>app/admin/book-form/book-form.component.html:56,58</source>
+    + Bild
+  </msg>
+  <msg id="BookFormComponent:book url placeholder"><source>app/admin/book-form/book-form.component.html:64</source>URL</msg>
+  <msg id="BookFormComponent:book thumbnail placeholder"><source>app/admin/book-form/book-form.component.html:69</source>Titel</msg>
+  <msg id="BookFormComponent:book form save"><source>app/admin/book-form/book-form.component.html:78,80</source>
+    Speichern
+  </msg>
+  <msg id="BookListComponent:no book"><source>app/books/book-list/book-list.component.html:10,12</source>
+      Es wurden noch keine Bücher eingetragen.
+    </msg>
+  <msg id="BookListComponent:loading data"><source>app/books/book-list/book-list.component.html:18,20</source>
+        Daten werden geladen...
+      </msg>
+  <msg id="BookDetailsComponent:book authors"><source>app/books/book-details/book-details.component.html:7,9</source>
+        Autoren
+      </msg>
+  <msg id="BookDetailsComponent:book isbn"><source>app/books/book-details/book-details.component.html:15,17</source>
+        ISBN
+      </msg>
+  <msg id="BookDetailsComponent:book published date"><source>app/books/book-details/book-details.component.html:21,23</source>
+        Erschienen
+      </msg>
+  <msg id="BookDetailsComponent:book rating"><source>app/books/book-details/book-details.component.html:27,29</source>
+        Rating
+      </msg>
+  <msg id="BookDetailsComponent:book description"><source>app/books/book-details/book-details.component.html:38,40</source>
+    Beschreibung
+  </msg>
+  <msg id="BookDetailsComponent:book delete"><source>app/books/book-details/book-details.component.html:49,51</source>
+      Buch löschen
+    </msg>
+  <msg id="BookDetailsComponent:book edit"><source>app/books/book-details/book-details.component.html:56,58</source>
+      Buch bearbeiten
+    </msg>
+</messagebundle>

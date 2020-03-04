@@ -1,0 +1,83 @@
+<form class="ui form"
+      (ngSubmit)="submitForm()"
+      #bookForm="ngForm">
+
+  <label>Buchtitel</label>
+  <input
+    name="title"
+    [(ngModel)]="book.title"
+    required
+    #titleInput="ngModel">
+  <bm-form-messages
+    [control]="titleInput"
+    controlName="title">
+  </bm-form-messages>
+
+  <label>Untertitel</label>
+  <input
+    name="subtitle"
+    [(ngModel)]="book.subtitle">
+
+  <label>ISBN</label>
+  <input
+    name="isbn"
+    [(ngModel)]="book.isbn"
+    required
+    minlength="10"
+    maxlength="13"
+    #isbnInput="ngModel">
+  <bm-form-messages
+    [control]="isbnInput"
+    controlName="isbn">
+  </bm-form-messages>
+
+  <label>Erscheinungsdatum</label>
+  <input
+    type="date"
+    name="published"
+    [(ngModel)]="book.published"
+    useValueAsDate
+    required
+    #dateInput="ngModel">
+  <bm-form-messages
+    [control]="dateInput"
+    controlName="published">
+  </bm-form-messages>
+
+  <label>Autor</label>
+  <input
+    name="authors"
+    [(ngModel)]="book.authors[0]"
+    required
+    #authorInput="ngModel">
+  <bm-form-messages
+    [control]="authorInput"
+    controlName="authors">
+  </bm-form-messages>
+
+  <label>Beschreibung</label>
+  <textarea
+    name="description"
+    [(ngModel)]="book.description"></textarea>
+
+  <label>Bild</label>
+  <div class="two fields">
+    <div class="field">
+      <input
+        name="url"
+        [(ngModel)]="book.thumbnails[0].url"
+        placeholder="URL">
+    </div>
+    <div class="field">
+      <input
+        name="title"
+        [(ngModel)]="book.thumbnails[0].title"
+        placeholder="Titel">
+    </div>
+  </div>
+
+  <button class="ui button" type="submit"
+    [disabled]="bookForm.invalid">
+    Speichern
+  </button>
+</form>

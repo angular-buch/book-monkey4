@@ -1,0 +1,18 @@
+.let-space-for-footer {
+  padding-bottom: 130px;
+}
+
+.let-space-for-mobile-top-menu {
+  margin-bottom: 140px;
+}
+
+.ui.footer.segment {
+  width: 100%;
+  position: fixed;
+  left:0;
+  bottom:0;
+}
+
+h4.ui.inverted.icon.header {
+  margin:0px;
+}

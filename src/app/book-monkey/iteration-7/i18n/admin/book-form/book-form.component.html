@@ -1,0 +1,81 @@
+<form class="ui form"
+  [formGroup]="bookForm"
+  (ngSubmit)="submitForm()">
+
+  <label i18n="@@BookFormComponent:book title">Buchtitel</label>
+  <input formControlName="title">
+  <bm-form-messages
+    [control]="bookForm.get('title')"
+    controlName="title">
+  </bm-form-messages>
+
+  <label i18n="@@BookFormComponent:book subtitle">Untertitel</label>
+  <input formControlName="subtitle">
+
+  <label i18n="@@BookFormComponent:book isbn">ISBN</label>
+  <input formControlName="isbn">
+  <bm-form-messages
+    [control]="bookForm.get('isbn')"
+    controlName="isbn">
+  </bm-form-messages>
+
+  <label i18n="@@BookFormComponent:book published date">Erscheinungsdatum</label>
+  <input type="date"
+    useValueAsDate
+    formControlName="published">
+  <bm-form-messages
+    [control]="bookForm.get('published')"
+    controlName="published">
+  </bm-form-messages>
+
+  <label i18n="@@BookFormComponent:book authors">Autoren</label>
+  <button type="button" class="ui mini button"
+    (click)="addAuthorControl()"
+    i18n="@@BookFormComponent:add author">
+    + Autor
+  </button>
+  <div class="fields" formArrayName="authors">
+    <div class="sixteen wide field"
+      *ngFor="let c of authors.controls; index as i">
+      <input placeholder="Autor"
+        i18n-placeholder="@@BookFormComponent:author placeholder"
+        [formControlName]="i">
+    </div>
+  </div>
+  <bm-form-messages
+    [control]="bookForm.get('authors')"
+    controlName="authors">
+  </bm-form-messages>
+
+  <label i18n="@@BookFormComponent:book description">Beschreibung</label>
+  <textarea formControlName="description"></textarea>
+
+  <label i18n="@@BookFormComponent:book thumbnails">Bilder</label>
+  <button type="button" class="ui mini button"
+    (click)="addThumbnailControl()"
+    i18n="@@BookFormComponent:add thumbnail">
+    + Bild
+  </button>
+  <div formArrayName="thumbnails">
+    <div class="fields"
+      *ngFor="let c of thumbnails.controls; index as i"
+      [formGroupName]="i">
+      <div class="nine wide field">
+        <input placeholder="URL"
+          i18n-placeholder="@@BookFormComponent:book url placeholder"
+          formControlName="url">
+      </div>
+      <div class="seven wide field">
+        <input placeholder="Titel"
+          i18n-placeholder="@@BookFormComponent:book thumbnail placeholder"
+          formControlName="title">
+      </div>
+    </div>
+  </div>
+
+  <button class="ui button" type="submit"
+    [disabled]="bookForm.invalid"
+    i18n="@@BookFormComponent:book form save">
+    Speichern
+  </button>
+</form>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE translationbundle [
+<!ELEMENT translationbundle (translation)*>
+<!ATTLIST translationbundle lang CDATA #REQUIRED>
+
+<!ELEMENT translation (#PCDATA|ph)*>
+<!ATTLIST translation id CDATA #REQUIRED>
+<!ATTLIST translation desc CDATA #IMPLIED>
+<!ATTLIST translation meaning CDATA #IMPLIED>
+<!ATTLIST translation xml:space (default|preserve) "default">
+
+<!ELEMENT ph (#PCDATA|ex)*>
+<!ATTLIST ph name CDATA #REQUIRED>
+
+<!ELEMENT ex (#PCDATA)>
+]>
+<translationbundle lang="en">
+  <translation id="AppComponent:home" desc="Text of the link to the home screen">Home</translation>
+  <translation id="AppComponent:book" desc="Text of the link to the books screen">Books</translation>
+  <translation id="AppComponent:admin" desc="Text of the link to the admin screen">Administration</translation>
+  <translation id="HomeComponent:header">Home</translation>
+  <translation id="HomeComponent:tagline" desc="a proud sentence about the project">This is the BookMonkey.</translation>
+  <translation id="HomeComponent:book list link" desc="Text of the link to the books screen">See book list</translation>
+  <translation id="HomeComponent:search">Search</translation>
+  <translation id="BookFormComponent:book form">Book Form</translation>
+  <translation id="BookFormComponent:book title">Book Title</translation>
+  <translation id="BookFormComponent:book subtitle">Subtitle</translation>
+  <translation id="BookFormComponent:book isbn">ISBN Number</translation>
+  <translation id="BookFormComponent:book published date">Published Date</translation>
+  <translation id="BookFormComponent:book authors">Authors</translation>
+  <translation id="BookFormComponent:add author">+ Author</translation>
+  <translation id="BookFormComponent:author placeholder">Author</translation>
+  <translation id="BookFormComponent:book description">Description</translation>
+  <translation id="BookFormComponent:book thumbnails">Thumbnails</translation>
+  <translation id="BookFormComponent:add thumbnail">+ Thumbnail</translation>
+  <translation id="BookFormComponent:book url placeholder">http://example_Url</translation>
+  <translation id="BookFormComponent:book thumbnail placeholder">Book Title</translation>
+  <translation id="BookFormComponent:book form save">Save</translation>
+  <translation id="BookListComponent:no book">No books were found in database.</translation>
+  <translation id="BookListComponent:loading data">Loading data...</translation>
+  <translation id="BookDetailsComponent:book authors">Authors</translation>
+  <translation id="BookDetailsComponent:book isbn">ISBN Number</translation>
+  <translation id="BookDetailsComponent:book published date">Published Date</translation>
+  <translation id="BookDetailsComponent:book rating">Rating</translation>
+  <translation id="BookDetailsComponent:book description">Description</translation>
+  <translation id="BookDetailsComponent:book delete">Delete Book</translation>
+  <translation id="BookDetailsComponent:book edit">Edit Book</translation>
+</translationbundle>

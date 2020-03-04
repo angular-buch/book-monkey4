@@ -1,0 +1,75 @@
+<form class="ui form"
+  [formGroup]="bookForm"
+  (ngSubmit)="submitForm()">
+
+  <label>Buchtitel</label>
+  <input formControlName="title">
+  <bm-form-messages
+    [control]="bookForm.get('title')"
+    controlName="title">
+  </bm-form-messages>
+
+  <label>Untertitel</label>
+  <input formControlName="subtitle">
+
+  <label>ISBN</label>
+  <input formControlName="isbn">
+  <bm-form-messages
+    [control]="bookForm.get('isbn')"
+    controlName="isbn">
+  </bm-form-messages>
+
+  <label>Erscheinungsdatum</label>
+  <input type="date"
+    useValueAsDate
+    formControlName="published">
+  <bm-form-messages
+    [control]="bookForm.get('published')"
+    controlName="published">
+  </bm-form-messages>
+
+  <label>Autoren</label>
+  <button type="button" class="ui mini button"
+    (click)="addAuthorControl()">
+    + Autor
+  </button>
+  <div class="fields" formArrayName="authors">
+    <div class="sixteen wide field"
+      *ngFor="let c of authors.controls; index as i">
+      <input placeholder="Autor"
+        [formControlName]="i">
+    </div>
+  </div>
+  <bm-form-messages
+    [control]="bookForm.get('authors')"
+    controlName="authors">
+  </bm-form-messages>
+
+  <label>Beschreibung</label>
+  <textarea formControlName="description"></textarea>
+
+  <label>Bilder</label>
+  <button type="button" class="ui mini button"
+    (click)="addThumbnailControl()">
+    + Bild
+  </button>
+  <div formArrayName="thumbnails">
+    <div class="fields"
+      *ngFor="let c of thumbnails.controls; index as i"
+      [formGroupName]="i">
+      <div class="nine wide field">
+        <input placeholder="URL"
+          formControlName="url">
+      </div>
+      <div class="seven wide field">
+        <input placeholder="Titel"
+          formControlName="title">
+      </div>
+    </div>
+  </div>
+
+  <button class="ui button" type="submit"
+    [disabled]="bookForm.invalid">
+    Speichern
+  </button>
+</form>

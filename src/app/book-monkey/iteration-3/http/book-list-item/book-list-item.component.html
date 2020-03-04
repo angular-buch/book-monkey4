@@ -1,0 +1,14 @@
+<img class="ui tiny image"
+     *ngIf="book.thumbnails && book.thumbnails[0] && book.thumbnails[0].url"
+     [src]="book.thumbnails[0].url">
+<div class="content">
+  <div class="header">{{ book.title }}</div>
+  <div *ngIf="book.subtitle" class="description">{{ book.subtitle }}</div>
+  <div class="metadata">
+    <span *ngFor="let author of book.authors; last as l">
+      {{ author }}<span *ngIf="!l">, </span>
+    </span>
+    <br>
+    ISBN {{ book.isbn }}
+  </div>
+</div>
