@@ -3,7 +3,7 @@ import { FormControl, FormArray, AbstractControl, Validators, ValidationErrors }
 import { Observable, of } from 'rxjs';
 
 import { FormMessagesComponent } from './form-messages.component';
-import { BookValidators } from '../shared/book.validators';
+import { BookValidators } from '../shared/book-validators';
 
 function bookExistsValidatorMock(control: AbstractControl): Observable<ValidationErrors | null> {
    return control.value === '1111111111'

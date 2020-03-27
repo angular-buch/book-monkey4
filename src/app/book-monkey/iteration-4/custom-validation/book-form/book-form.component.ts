@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angu
 import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 
 import { Book, Thumbnail } from '../shared/book';
-import { BookValidators } from '../shared/book.validators';
+import { BookValidators } from '../shared/book-validators';
 import { BookExistsValidatorService } from '../shared/book-exists-validator.service';
 
 @Component({
