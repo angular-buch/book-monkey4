@@ -9,7 +9,7 @@ import { BookListComponent } from './book-list/book-list.component';
 import { BookListItemComponent } from './book-list-item/book-list-item.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { SearchComponent } from './search/search.component';
-import { TokenInterceptor } from './shared/token-interceptor'; // NEW
+import { TokenInterceptor } from './shared/token.interceptor'; // NEW
 
 @NgModule({
   declarations: [

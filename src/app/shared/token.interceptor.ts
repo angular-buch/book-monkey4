@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpInterceptor, HttpHandler, HttpRequest, HttpEvent } from '@angular/common/http';
+import {
+  HttpRequest,
+  HttpHandler,
+  HttpEvent,
+  HttpInterceptor
+} from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable()
@@ -7,9 +12,9 @@ export class TokenInterceptor implements HttpInterceptor {
   private authToken = '1234567890';
 
   intercept(
-    request: HttpRequest<any>,
+    request: HttpRequest<unknown>,
     next: HttpHandler
-  ): Observable<HttpEvent<any>> {
+  ): Observable<HttpEvent<unknown>> {
     const newRequest = request.clone({
       setHeaders: {
         Authorization: `Bearer ${this.authToken}`

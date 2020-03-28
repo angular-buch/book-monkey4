@@ -3,7 +3,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { BookStoreService } from './book-store.service';
-import { TokenInterceptor } from './token-interceptor';
+import { TokenInterceptor } from './token.interceptor';
 
 describe(`TokenInterceptor`, () => {
   let bs: BookStoreService;

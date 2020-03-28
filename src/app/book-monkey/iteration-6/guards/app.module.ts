@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module.one-app';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
-import { TokenInterceptor } from './shared/token-interceptor';
+import { TokenInterceptor } from './shared/token.interceptor';
 
 @NgModule({
   declarations: [
