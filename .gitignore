@@ -47,3 +47,4 @@ Thumbs.db
 
 # Extra for BookMonkey
 build-workspace
+.angulardoc.json
