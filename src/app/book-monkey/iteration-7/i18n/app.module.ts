@@ -24,7 +24,7 @@ import { TokenInterceptor } from './shared/token.interceptor';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
-    // { provide: LOCALE_ID, useValue: 'de' }
+    { provide: LOCALE_ID, useValue: 'en-US' } // this is also the default
   ],
   bootstrap: [AppComponent]
 })
@@ -33,6 +33,6 @@ export class AppModule {
     registerLocaleData(localeDe);
     registerLocaleData(localeFr);
 
-    console.log('Current Locale', locale);
+    console.log('DEBUG – Current Locale:', locale);
   }
 }
