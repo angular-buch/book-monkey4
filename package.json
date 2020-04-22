@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "start-de": "ng serve --prod",
     "start-en": "ng serve --configuration=production-en",
-    "extract-i18n": "ng xi18n --i18nFormat=xmb"
+    "extract-i18n": "ng xi18n --format=xmb --outputPath=src"
   },
   "private": true,
   "dependencies": {
