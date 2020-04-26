@@ -66,7 +66,6 @@
                 }
               ]
             },
-
             "production-en": {
               "fileReplacements": [
                 {
@@ -165,6 +164,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "BookMonkey"
 }
