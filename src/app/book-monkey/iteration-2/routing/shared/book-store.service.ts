@@ -18,7 +18,7 @@ export class BookStoreService {
         subtitle: 'Grundlagen, fortgeschrittene Themen und Best Practices – inklusive RxJS, NgRx & PWA',
         rating: 5,
         thumbnails: [{
-          url: 'https://ng-buch.de/buch1.jpg',
+          url: 'https://ng-buch.de/angular-cover.jpg',
           title: 'Buchcover'
         }],
         description: 'Die Autoren führen Sie mit einem anspruchsvollen Beispielprojekt durch die Welt von Angular...'
@@ -31,7 +31,7 @@ export class BookStoreService {
         subtitle: 'Die praktische Einführung in React, React Router und Redux',
         rating: 3,
         thumbnails: [{
-          url: 'https://ng-buch.de/buch2.jpg',
+          url: 'https://ng-buch.de/react-cover.jpg',
           title: 'Buchcover'
         }],
         description: 'Das bewährte und umfassende Praxisbuch zu React...'
