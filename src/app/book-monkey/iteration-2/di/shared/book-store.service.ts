@@ -15,7 +15,7 @@ export class BookStoreService {
         title: 'Angular',
         authors: ['Ferdinand Malcher', 'Johannes Hoppe', 'Danny Koppenhagen'],
         published: new Date(2020, 6, 1),
-        subtitle: 'Grundlagen, fortgeschrittene Themen und Best Practices – inklusive RxJS, NgRx & PWA',
+        subtitle: 'Grundlagen, fortgeschrittene Themen und Best Practices - inklusive RxJS, NgRx & PWA',
         rating: 5,
         thumbnails: [{
           url: 'https://ng-buch.de/angular-cover.jpg',
