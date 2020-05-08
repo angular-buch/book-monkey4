@@ -22,7 +22,7 @@ describe('BookExistsValidatorService', () => {
         { provide: BookStoreService, useValue: bookStoreServiceStub }
       ]
     });
-    service = TestBed.get(BookExistsValidatorService);
+    service = TestBed.inject(BookExistsValidatorService);
   });
 
   it('should detect that the ISBN does not exist', () => {

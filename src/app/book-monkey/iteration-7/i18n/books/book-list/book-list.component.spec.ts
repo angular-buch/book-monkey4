@@ -59,7 +59,7 @@ describe('BookListComponent', () => {
   }));
 
   beforeEach(async(() => {
-    location = TestBed.get(Location);
+    location = TestBed.inject(Location);
     fixture = TestBed.createComponent(BookListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

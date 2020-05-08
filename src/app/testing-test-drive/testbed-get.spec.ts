@@ -1,14 +1,14 @@
-// this is just a little test for TestBed.get()
+// this is just a little test for TestBed.inject()
 // this is not a real part of the BookMonkey, you can ignore this file
 
 import { ErrorHandler } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 
-describe('TestBed.get()', () => {
+describe('TestBed.inject()', () => {
 
   let errorHandler: ErrorHandler; 
   beforeEach(() => {
-    errorHandler = TestBed.get(ErrorHandler); 
+    errorHandler = TestBed.inject(ErrorHandler); 
   });
 
   it('should also retrieve dependencies', () => {

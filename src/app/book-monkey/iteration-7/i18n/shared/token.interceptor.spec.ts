@@ -23,8 +23,8 @@ describe(`TokenInterceptor`, () => {
       ],
     });
 
-    bs = TestBed.get(BookStoreService);
-    httpMock = TestBed.get(HttpTestingController);
+    bs = TestBed.inject(BookStoreService);
+    httpMock = TestBed.inject(HttpTestingController);
   });
 
   it('should add an Authorization header', () => {

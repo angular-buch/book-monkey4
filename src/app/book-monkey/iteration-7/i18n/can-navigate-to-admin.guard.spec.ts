@@ -13,7 +13,7 @@ describe('CanNavigateToAdminGuard', () => {
   }));
 
   beforeEach(() => {
-    navigateToAdminGuard = TestBed.get(CanNavigateToAdminGuard);
+    navigateToAdminGuard = TestBed.inject(CanNavigateToAdminGuard);
   });
 
   it('should return true when user already confirmed', () => {

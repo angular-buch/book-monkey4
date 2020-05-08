@@ -30,8 +30,8 @@ describe('BookStoreService', () => {
       providers: [BookStoreService]
     });
 
-    httpMock = TestBed.get(HttpTestingController);
-    service = TestBed.get(BookStoreService);
+    httpMock = TestBed.inject(HttpTestingController);
+    service = TestBed.inject(BookStoreService);
   });
 
   it('should GET a list of all books', () => {

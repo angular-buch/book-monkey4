@@ -48,9 +48,9 @@ describe('BookStoreService', () => {
     });
 
     // Inject http, test controller and service-under-test to be referenced by each test
-    httpClient = TestBed.get(HttpClient);
-    httpMock = TestBed.get(HttpTestingController);
-    bs = TestBed.get(BookStoreService);
+    httpClient = TestBed.inject(HttpClient);
+    httpMock = TestBed.inject(HttpTestingController);
+    bs = TestBed.inject(BookStoreService);
   });
 
   afterEach(() => {
@@ -62,7 +62,7 @@ describe('BookStoreService', () => {
     const apiUrl = 'https://api4.angular-buch.com/secure/books';
 
     beforeEach(() => {
-      bs = TestBed.get(BookStoreService);
+      bs = TestBed.inject(BookStoreService);
     });
 
     it('should GET a list of all books', () => {
@@ -99,7 +99,7 @@ describe('BookStoreService', () => {
     const apiUrl = `https://api4.angular-buch.com/secure/book`;
 
     beforeEach(() => {
-      bs = TestBed.get(BookStoreService);
+      bs = TestBed.inject(BookStoreService);
     });
 
     it('should return the matching book reuqested by ID', () => {
