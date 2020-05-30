@@ -16,3 +16,9 @@
 h4.ui.inverted.icon.header {
   margin:0px;
 }
+
+@media only screen and (max-width: 768px) {
+  .let-space-for-footer {
+    padding-top: 40px;
+  }
+}
