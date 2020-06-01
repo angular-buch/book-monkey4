@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "BookMonkey": {
+    "book-monkey": {
       "i18n": {
         "locales": {
           "en": {
@@ -21,7 +21,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/BookMonkey",
+            "outputPath": "dist/book-monkey",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -103,21 +103,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "BookMonkey:build"
+            "browserTarget": "book-monkey:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "BookMonkey:build:production"
+              "browserTarget": "book-monkey:build:production"
             },
             "production-en": {
-              "browserTarget": "BookMonkey:build:production-en"
+              "browserTarget": "book-monkey:build:production-en"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "BookMonkey:build"
+            "browserTarget": "book-monkey:build"
           }
         },
         "test": {
@@ -155,16 +155,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "BookMonkey:serve"
+            "devServerTarget": "book-monkey:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "BookMonkey:serve:production"
+              "devServerTarget": "book-monkey:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "BookMonkey"
+  "defaultProject": "book-monkey"
 }
