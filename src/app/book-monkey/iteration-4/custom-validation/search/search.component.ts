@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit {
 
   constructor(private bs: BookStoreService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.keyUp$.pipe(
       filter(term => term.length >= 3),
       debounceTime(500),

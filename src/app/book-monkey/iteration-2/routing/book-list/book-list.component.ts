@@ -13,7 +13,7 @@ export class BookListComponent implements OnInit {
 
   constructor(private bs: BookStoreService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.books = this.bs.getAll();
   }
 }

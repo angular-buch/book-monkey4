@@ -10,6 +10,6 @@ import { Book } from '../shared/book';
 export class BookListItemComponent implements OnInit {
   @Input() book: Book;
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 }

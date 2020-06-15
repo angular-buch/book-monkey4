@@ -10,7 +10,7 @@ import { Book } from '../shared/book';
 export class BookListComponent implements OnInit {
   books: Book[];
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.books = [
       {
         isbn: '9783864907791',

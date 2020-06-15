@@ -18,7 +18,7 @@ export class BookFormComponent implements OnInit, OnChanges {
 
   constructor(private fb: FormBuilder) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.initForm();
   }
 

@@ -20,7 +20,7 @@ export class EditBookComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.route.paramMap.pipe(
       map(params => params.get('isbn')),
       switchMap((isbn: string) => this.bs.getSingle(isbn))

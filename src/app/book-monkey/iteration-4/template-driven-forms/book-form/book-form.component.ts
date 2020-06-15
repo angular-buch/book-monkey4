@@ -24,6 +24,6 @@ export class BookFormComponent implements OnInit {
     this.bookForm.reset();
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 }

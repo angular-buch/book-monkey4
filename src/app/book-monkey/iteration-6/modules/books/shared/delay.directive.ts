@@ -11,7 +11,7 @@ export class DelayDirective implements OnInit {
     private viewContainerRef: ViewContainerRef
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     setTimeout(() => {
       this.viewContainerRef.createEmbeddedView(this.templateRef);
     }, this.bmDelay);

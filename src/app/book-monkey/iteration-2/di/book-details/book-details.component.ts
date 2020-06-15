@@ -11,7 +11,7 @@ export class BookDetailsComponent implements OnInit {
   @Input() book: Book;
   @Output() showListEvent = new EventEmitter<any>();
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
   getRating(num: number) {

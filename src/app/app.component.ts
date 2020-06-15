@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
 
   constructor(private r: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.r.events.pipe(
       filter(e => e instanceof NavigationEnd)
     ).subscribe(e => {

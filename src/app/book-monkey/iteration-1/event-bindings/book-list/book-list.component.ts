@@ -11,7 +11,7 @@ export class BookListComponent implements OnInit {
   books: Book[];
   @Output() showDetailsEvent = new EventEmitter<Book>();
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.books = [
       {
         isbn: '9783864907791',

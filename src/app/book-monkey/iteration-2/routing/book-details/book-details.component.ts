@@ -17,7 +17,7 @@ export class BookDetailsComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     const params = this.route.snapshot.paramMap;
     this.book = this.bs.getSingle(params.get('isbn'));
   }

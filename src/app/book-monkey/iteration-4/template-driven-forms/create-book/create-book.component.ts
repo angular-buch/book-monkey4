@@ -17,7 +17,7 @@ export class CreateBookComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
   createBook(book: Book) {

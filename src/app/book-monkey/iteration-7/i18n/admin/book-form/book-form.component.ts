@@ -23,7 +23,7 @@ export class BookFormComponent implements OnInit, OnChanges {
     private bookExistsValidator: BookExistsValidatorService
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.initForm();
   }
 

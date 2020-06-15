@@ -31,7 +31,7 @@ export class FormMessagesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
   errorsForControl(): string[] {
