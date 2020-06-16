@@ -8,7 +8,7 @@ describe('IsbnPipe', () => {
     pipe = new IsbnPipe(); 
   });
 
-  it('should ignore empty values values', () => {
+  it('should ignore empty values', () => {
     expect(pipe.transform('')).toBe(null); 
   });
 
