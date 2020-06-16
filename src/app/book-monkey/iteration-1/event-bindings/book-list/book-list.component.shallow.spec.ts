@@ -25,8 +25,9 @@ describe('BookListComponent', () => {
   it('should emit the showDetailsEvent on click', () => {
 
     let receivedBook: Book;
-    component.showDetailsEvent
-      .subscribe((book) => receivedBook = book);
+    component.showDetailsEvent.subscribe(book => {
+      receivedBook = book;
+    });
 
     fixture.nativeElement
       .querySelector('bm-book-list-item').click();

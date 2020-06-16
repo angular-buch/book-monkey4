@@ -24,8 +24,10 @@ describe('BookListComponent', () => {
     };
     let receivedBook: Book;
 
-    component.showDetailsEvent
-      .subscribe((book) => receivedBook = book);
+    component.showDetailsEvent.subscribe(book => {
+      receivedBook = book;
+    });
+
     component.showDetails(sendBook);
 
     expect(sendBook).toBe(receivedBook);
