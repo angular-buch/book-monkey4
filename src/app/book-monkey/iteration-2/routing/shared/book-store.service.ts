@@ -14,27 +14,27 @@ export class BookStoreService {
         isbn: '9783864907791',
         title: 'Angular',
         authors: ['Ferdinand Malcher', 'Johannes Hoppe', 'Danny Koppenhagen'],
-        published: new Date(2020, 6, 1),
-        subtitle: 'Grundlagen, fortgeschrittene Themen und Best Practices - inklusive RxJS, NgRx & PWA',
+        published: new Date(2020, 8, 1),
+        subtitle: 'Grundlagen, fortgeschrittene Themen und Best Practices',
         rating: 5,
         thumbnails: [{
           url: 'https://ng-buch.de/angular-cover.jpg',
           title: 'Buchcover'
         }],
-        description: 'Die Autoren führen Sie mit einem anspruchsvollen Beispielprojekt durch die Welt von Angular...'
+        description: 'Lernen Sie Angular mit diesem Praxisbuch!'
       },
       {
         isbn: '9783864905520',
         title: 'React',
         authors: ['Oliver Zeigermann', 'Nils Hartmann'],
         published: new Date(2019, 11, 12),
-        subtitle: 'Die praktische Einführung in React, React Router und Redux',
+        subtitle: 'Grundlagen, fortgeschrittene Techniken und Praxistipps',
         rating: 3,
         thumbnails: [{
           url: 'https://ng-buch.de/react-cover.jpg',
           title: 'Buchcover'
         }],
-        description: 'Das bewährte und umfassende Praxisbuch zu React...'
+        description: 'Das bewährte und umfassende Praxisbuch zu React.'
       }
     ];
   }
