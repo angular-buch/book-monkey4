@@ -28,6 +28,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('div.sub.header').textContent).toContain('Quelltext auf Github');
+    expect(compiled.querySelector('div.sub.header').textContent).toContain('Quelltext auf GitHub');
   }));
 });
