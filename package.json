@@ -8,9 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start-de": "ng serve --prod",
-    "start-en": "ng serve --configuration=production-en",
-    "extract-i18n": "ng xi18n --format=xmb --outputPath=src"
+    "start-en": "ng serve --configuration=en",
+    "build-en": "ng build --configuration=production,en",
+    "extract-i18n": "ng xi18n --format=xmb --output-path=src"
   },
   "private": true,
   "dependencies": {
