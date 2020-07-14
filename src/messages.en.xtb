@@ -45,4 +45,5 @@
   <translation id="BookDetailsComponent:book description">Description</translation>
   <translation id="BookDetailsComponent:book delete">Delete Book</translation>
   <translation id="BookDetailsComponent:book edit">Edit Book</translation>
+  <translation id="CanNavigateToAdminGuardQuestion">With great power comes great responsibility. Would you like to enter the admin area?</translation>
 </translationbundle>

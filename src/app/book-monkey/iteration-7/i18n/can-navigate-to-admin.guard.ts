@@ -10,7 +10,8 @@ export class CanNavigateToAdminGuard implements CanActivate {
 
   canActivate(): boolean {
     if (!this.accessGranted) {
-      this.accessGranted = window.confirm('Mit großer Macht kommt große Verantwortung. Möchten Sie den Admin-Bereich betreten?');
+      const question = $localize`:@@CanNavigateToAdminGuardQuestion:Mit großer Macht kommt große Verantwortung. Möchten Sie den Admin-Bereich betreten?`;
+      this.accessGranted = window.confirm(question);
     }
     return this.accessGranted;
   }
