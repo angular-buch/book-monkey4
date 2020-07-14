@@ -75,5 +75,5 @@
   <msg id="BookDetailsComponent:book edit"><source>app/books/book-details/book-details.component.html:56,58</source>
       Buch bearbeiten
     </msg>
-  <msg id="CanNavigateToAdminGuardQuestion">Mit großer Macht kommt große Verantwortung. Möchten Sie den Admin-Bereich betreten?</msg>
+  <msg id="CanNavigateToAdminGuard:question">Mit großer Macht kommt große Verantwortung. Möchten Sie den Admin-Bereich betreten?</msg>
 </messagebundle>
