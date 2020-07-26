@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, tick, fakeAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute } from '@angular/router';
 import { of, Observable } from 'rxjs';
@@ -76,7 +76,8 @@ describe('BookDetailsComponent', () => {
     expect(component.book.isbn).toBe('111');
   });
 
-  it('should convert rating number into an array', () => {
+  it('should show 4 stars', async ()  => {
+    await fixture.whenStable(); // because of DelayDirective
     const ratingEl = nativeEl.querySelectorAll('i.star');
     expect(ratingEl.length).toBe(4);
   });
