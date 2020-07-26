@@ -1,11 +1,11 @@
 <div class="ui middle aligned selection divided list">
-  
+
   <ng-container *ngIf="books$ | async as books; else loading">
     <bm-book-list-item class="item"
       *ngFor="let b of books"
       [book]="b"
       [routerLink]="b.isbn"></bm-book-list-item>
-    
+
     <p *ngIf="!books.length"
       i18n="@@BookListComponent:no book">
       Es wurden noch keine Bücher eingetragen.
@@ -22,4 +22,3 @@
   </ng-template>
 
 </div>
-    

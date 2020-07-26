@@ -1,18 +1,15 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { CanNavigateToAdminGuard } from './can-navigate-to-admin.guard';
 
 describe('CanNavigateToAdminGuard', () => {
   let navigateToAdminGuard: CanNavigateToAdminGuard;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
         CanNavigateToAdminGuard
       ]
     });
-  }));
-
-  beforeEach(() => {
     navigateToAdminGuard = TestBed.inject(CanNavigateToAdminGuard);
   });
 

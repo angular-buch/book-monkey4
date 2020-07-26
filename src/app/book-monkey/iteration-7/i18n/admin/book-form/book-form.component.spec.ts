@@ -48,7 +48,7 @@ describe('BookFormComponent', () => {
         HttpClientTestingModule,
         ReactiveFormsModule
       ]
-    });
+    }).compileComponents();
   }));
 
   beforeEach(() => {

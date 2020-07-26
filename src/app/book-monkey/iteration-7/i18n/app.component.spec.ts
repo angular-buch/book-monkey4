@@ -17,7 +17,7 @@ describe('AppComponent', () => {
         RouterTestingModule,
         HttpClientTestingModule
       ]
-    });
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -29,7 +29,7 @@ describe('AppComponent', () => {
   it('should have a link to /home', () => {
     const debugElements = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref));
     const index = debugElements.findIndex(de => {
-      return de.properties['href'] === '/home';
+      return de.properties.href === '/home';
     });
     expect(index).toBeGreaterThan(-1);
   });
@@ -37,7 +37,7 @@ describe('AppComponent', () => {
   it('should have a link to /books', () => {
     const debugElements = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref));
     const index = debugElements.findIndex(de => {
-      return de.properties['href'] === '/books';
+      return de.properties.href === '/books';
     });
     expect(index).toBeGreaterThan(-1);
   });
@@ -45,7 +45,7 @@ describe('AppComponent', () => {
   it('should have a link to /admin', () => {
     const debugElements = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref));
     const index = debugElements.findIndex(de => {
-      return de.properties['href'] === '/admin';
+      return de.properties.href === '/admin';
     });
     expect(index).toBeGreaterThan(-1);
   });

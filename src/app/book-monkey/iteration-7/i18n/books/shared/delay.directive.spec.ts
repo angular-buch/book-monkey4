@@ -1,5 +1,5 @@
 import { Component, DebugElement } from '@angular/core';
-import { TestBed, ComponentFixture, fakeAsync, tick } from '@angular/core/testing';
+import { TestBed, ComponentFixture, fakeAsync, tick, async } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { DelayDirective } from './delay.directive';
@@ -14,13 +14,16 @@ describe('DelayDirective', () => {
   let fixture: ComponentFixture<TestDelayDirectiveComponent>;
   let pEl: DebugElement;
 
-  beforeEach(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         TestDelayDirectiveComponent,
         DelayDirective
       ]
-    });
+    }).compileComponents();
+  }));
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestDelayDirectiveComponent);
     component = fixture.componentInstance;
     pEl = fixture.debugElement.query(By.css('p'));
