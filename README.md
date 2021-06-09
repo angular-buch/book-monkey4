@@ -1,3 +1,9 @@
+> ## :warning: Achtung
+> Dies ist das Beispielprojekt für das Angular-Buch der **3. Auflage**!
+Falls Sie eine andere Version des Buchs besitzen, finden Sie den Beispielcode in folgenden anderen Repositorys:
+> * [1. Auflage: `book-monkey2`](https://github.com/angular-buch/book-monkey2)
+> * [2. Auflage: `book-monkey3`](https://github.com/angular-buch/book-monkey3)
+
 # BookMonkey 4
 [![Monkey](src/assets/images/monkey-thinking.png)](http://book-monkey4.angular-buch.com/)
 
