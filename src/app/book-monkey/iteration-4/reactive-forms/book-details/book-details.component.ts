@@ -10,7 +10,7 @@ import { BookStoreService } from '../shared/book-store.service';
   styleUrls: ['./book-details.component.css']
 })
 export class BookDetailsComponent implements OnInit {
-  book: Book;
+  book?: Book;
 
   constructor(
     private bs: BookStoreService,
@@ -20,7 +20,7 @@ export class BookDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const params = this.route.snapshot.paramMap;
-    this.bs.getSingle(params.get('isbn'))
+    this.bs.getSingle(params.get('isbn') || '')
       .subscribe(b => this.book = b);
   }
 
@@ -29,7 +29,7 @@ export class BookDetailsComponent implements OnInit {
   }
 
   removeBook() {
-    if (confirm('Buch wirklich löschen?')) {
+    if (this.book && confirm('Buch wirklich löschen?')) {
       this.bs.remove(this.book.isbn)
         .subscribe(res => this.router.navigate(['../'], { relativeTo: this.route }));
     }

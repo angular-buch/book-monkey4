@@ -12,38 +12,19 @@ export class BookFormComponent implements OnInit, OnChanges {
 
   bookForm: FormGroup;
 
-  @Input() book: Book;
+  // ⚠️ Unterschied zum Buch: Property ist optional, sonst muss es direkt zugewiesen werden.
+  @Input() book?: Book;
   @Input() editing = false;
   @Output() submitBook = new EventEmitter<Book>();
 
-  constructor(private fb: FormBuilder) { }
-
-  ngOnInit(): void {
-    this.initForm();
-  }
-
-  ngOnChanges() {
-    this.initForm();
-    this.setFormValues(this.book);
-  }
-
-  private setFormValues(book: Book) {
-    this.bookForm.patchValue(book);
-
-    this.bookForm.setControl(
-      'authors',
-      this.buildAuthorsArray(book.authors)
-    );
-
-    this.bookForm.setControl(
-      'thumbnails',
-      this.buildThumbnailsArray(book.thumbnails)
-    );
-  }
-
-  private initForm() {
-    if (this.bookForm) { return; }
-
+  constructor(private fb: FormBuilder) {
+    /** ⚠️ Unterschied zum Buch:
+     * Initialisierung erfolgt direkt im Konstruktor.
+     * So ist `this.bookForm` kein optionales Property.
+     * Außerdem entfällt die "doppelte" Initialisierung
+     * im ngOnInit bzw. ngOnChanges. Sobald die Lifecycle-Hooks
+     * ausgeführt werden, ist die FormGroup bereits instanziiert.
+     */
     this.bookForm = this.fb.group({
       title: ['', Validators.required],
       subtitle: [''],
@@ -60,6 +41,41 @@ export class BookFormComponent implements OnInit, OnChanges {
       published: []
     });
   }
+
+  ngOnInit(): void {
+    // ⚠️ Unterschied zum Buch: verschoben in constructor
+    // this.initForm();
+  }
+
+  ngOnChanges() {
+    // ⚠️ Unterschied zum Buch: verschoben in constructor
+    // this.initForm();
+
+    // ⚠️ Unterschied zum Buch: Existenzprüfung, weil `this.book` optional ist
+    if (this.book) {
+      this.setFormValues(this.book);
+    }
+  }
+
+  private setFormValues(book: Book) {
+    this.bookForm.patchValue(book);
+
+    this.bookForm.setControl(
+      'authors',
+      this.buildAuthorsArray(book.authors)
+    );
+
+    // ⚠️ Unterschied zum Buch: Existenzprüfung, weil `book.thumbnails` optional ist
+    if (book.thumbnails) {
+      this.bookForm.setControl(
+        'thumbnails',
+        this.buildThumbnailsArray(book.thumbnails)
+      );
+    };
+  }
+
+  // ⚠️ Unterschied zum Buch: verschoben in constructor
+  // private initForm() {}
 
   private buildAuthorsArray(values: string[]): FormArray {
     return this.fb.array(values, Validators.required);
@@ -91,12 +107,17 @@ export class BookFormComponent implements OnInit, OnChanges {
 
   submitForm() {
     const formValue = this.bookForm.value;
+    /** ⚠️ Unterschied zum Buch:
+     * `formValue.authors` und `formValue.thumbnails` hat Typ `any`.
+     * Deshalb haben wir den Typ im Argument der Filterfunktion explizit angegeben.
+     */
     const authors = formValue.authors
-              .filter(author => author);
+              .filter((author: string) => author);
     const thumbnails = formValue.thumbnails
-              .filter(thumbnail => thumbnail.url);
+              .filter((thumbnail: Thumbnail) => thumbnail.url);
 
-    const isbn = this.editing ? this.book.isbn : formValue.isbn;
+    // ⚠️ Unterschied zum Buch: Existenzprüfung auf `this.book`, weil optionales Property
+    const isbn = this.editing && this.book ? this.book.isbn : formValue.isbn;
 
     const newBook: Book = {
       ...formValue,

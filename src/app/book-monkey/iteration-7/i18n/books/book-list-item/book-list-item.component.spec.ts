@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BookListItemComponent } from './book-list-item.component';
 import { IsbnPipe } from '../shared/isbn.pipe';
@@ -22,7 +22,7 @@ describe('BookListItemComponent', () => {
   let fixture: ComponentFixture<TestHostComponent>;
   let nativeEl: HTMLElement;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         TestHostComponent,

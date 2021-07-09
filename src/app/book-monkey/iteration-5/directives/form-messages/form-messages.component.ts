@@ -8,11 +8,11 @@ import { AbstractControl } from '@angular/forms';
 })
 export class FormMessagesComponent implements OnInit {
 
-  @Input() control: AbstractControl;
-  @Input() controlName: string;
+  @Input() control?: AbstractControl | null;
+  @Input() controlName?: string;
 
 
-  private allMessages = {
+  private allMessages: { [key: string]: { [key: string]: string } } = {
     title: {
       required: 'Ein Buchtitel muss angegeben werden.'
     },
@@ -35,14 +35,15 @@ export class FormMessagesComponent implements OnInit {
   }
 
   errorsForControl(): string[] {
-    const messages = this.allMessages[this.controlName];
+    type allMessagesKey = keyof FormMessagesComponent['allMessages'];
+    const messages = this.allMessages[this.controlName as keyof allMessagesKey];
 
     if (
       !this.control ||
       !this.control.errors ||
       !messages ||
       !this.control.dirty
-    ) { return null; }
+    ) { return []; }
 
     return Object.keys(this.control.errors)
       .map(err => messages[err]);

@@ -6,7 +6,7 @@ export class DeepThought {
 
 describe('Deep Thought', () => {
 
-  let deepThought, answer;
+  let deepThought: DeepThought, answer: number;
   beforeEach(() => {
 
     // Arrange

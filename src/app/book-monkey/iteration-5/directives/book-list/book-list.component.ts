@@ -12,9 +12,9 @@ import { BookStoreService } from '../shared/book-store.service';
 export class BookListComponent implements OnInit {
   books$: Observable<Book[]>;
 
-  constructor(private bs: BookStoreService) { }
-
-  ngOnInit(): void {
+  constructor(private bs: BookStoreService) {
     this.books$ = this.bs.getAll();
   }
+
+  ngOnInit(): void {}
 }

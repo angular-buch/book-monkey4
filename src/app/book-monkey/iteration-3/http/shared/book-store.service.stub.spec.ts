@@ -45,7 +45,7 @@ describe('BookStoreService', () => {
     inject([BookStoreService],
       (service: BookStoreService) => {
 
-      let receivedBooks: Book[];
+      let receivedBooks: Book[] = [];
       service.getAll().subscribe(b => receivedBooks = b);
 
       expect(receivedBooks.length).toBe(2);

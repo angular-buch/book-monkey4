@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Location } from '@angular/common';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
 
@@ -16,7 +16,7 @@ class TestDetailsComponent { }
   template: ''
 })
 class TestBookListItemComponent {
-  @Input() book: Book;
+  @Input() book?: Book;
 }
 
 describe('BookListComponent', () => {
@@ -39,7 +39,7 @@ describe('BookListComponent', () => {
     }
   ];
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         BookListComponent,
@@ -67,7 +67,7 @@ describe('BookListComponent', () => {
 
   it('should display books', () => {
 
-    let receivedBooks: Book[];
+    let receivedBooks: Book[] = [];
     component.books$.subscribe(books => receivedBooks = books);
 
     expect(receivedBooks.length).toBe(2);
@@ -75,7 +75,7 @@ describe('BookListComponent', () => {
     expect(receivedBooks[1].isbn).toBe('222');
   });
 
-  it('should navigate to details page by ISBN', async(() => {
+  it('should navigate to details page by ISBN', waitForAsync(() => {
 
     fixture.nativeElement
       .querySelector('bm-book-list-item').click();

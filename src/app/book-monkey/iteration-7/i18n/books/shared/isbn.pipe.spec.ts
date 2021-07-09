@@ -9,11 +9,11 @@ describe('IsbnPipe', () => {
   });
 
   it('should ignore empty values', () => {
-    expect(pipe.transform('')).toBe(null); 
+    expect(pipe.transform('')).toBe(''); 
   });
 
   it('should ignore values of null', () => {
-    expect(pipe.transform(null)).toBe(null); 
+    expect(pipe.transform(null)).toBe(''); 
   });
 
   it('should format an ISBN with a dash', () => {

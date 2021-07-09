@@ -8,7 +8,7 @@ import { Book } from '../shared/book';
   styleUrls: ['./book-list-item.component.css']
 })
 export class BookListItemComponent implements OnInit {
-  @Input() book: Book;
+  @Input() book?: Book;
 
   ngOnInit(): void {
   }

@@ -10,7 +10,11 @@ type ViewState = 'list' | 'details';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  book: Book;
+  /** ⚠️ Unterschied zum Buch:
+   * Das Property wurde mit dem Fragezeichen als optional gekennzeichnet.
+   * Tun wir das nicht, muss das Property immer sofort zugewiesen werden – direkt oder im Konstruktor.
+   */
+  book?: Book;
   viewState: ViewState = 'list';
 
   showList() {

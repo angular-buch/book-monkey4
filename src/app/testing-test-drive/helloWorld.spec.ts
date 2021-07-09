@@ -6,7 +6,7 @@ export class DeepThought {
 
 describe('Deep Thought', () => {
 
-  let deepThought;
+  let deepThought: DeepThought;
   beforeEach(() => {
 
     // Arrange

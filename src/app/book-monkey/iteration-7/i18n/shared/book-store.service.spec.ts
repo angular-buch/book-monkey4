@@ -36,7 +36,7 @@ describe('BookStoreService', () => {
 
   it('should GET a list of all books', () => {
 
-    let receivedBooks: Book[];
+    let receivedBooks: Book[] = [];
     service.getAll().subscribe(books => receivedBooks = books); 
 
     // Request aus der Warteschlange holen

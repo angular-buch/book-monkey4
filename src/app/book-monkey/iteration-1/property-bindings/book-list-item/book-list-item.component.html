@@ -1,14 +1,21 @@
-<img class="ui tiny image"
-     *ngIf="book.thumbnails && book.thumbnails[0] && book.thumbnails[0].url"
-     [src]="book.thumbnails[0].url">
-<div class="content">
-  <div class="header">{{ book.title }}</div>
-  <div *ngIf="book.subtitle" class="description">{{ book.subtitle }}</div>
-  <div class="metadata">
-    <span *ngFor="let author of book.authors; last as l">
-      {{ author }}<span *ngIf="!l">, </span>
-    </span>
-    <br>
-    ISBN {{ book.isbn }}
+<!-- ⚠️ Unterschied zum Buch:
+Das gesamte Template wird mit ngIf ausgeblendet, wenn kein Buch vorhanden ist.
+Der <ng-container> ist ein Hilfselement, das nicht als DOM-Element gerendert wird.
+Er sorgt für eine logische Gruppierung. Innerhalb des Containers ist `book` immer definiert.
+-->
+<ng-container *ngIf="book">
+  <img class="ui tiny image"
+      *ngIf="book.thumbnails && book.thumbnails[0] && book.thumbnails[0].url"
+      [src]="book.thumbnails[0].url">
+  <div class="content">
+    <div class="header">{{ book.title }}</div>
+    <div *ngIf="book.subtitle" class="description">{{ book.subtitle }}</div>
+    <div class="metadata">
+      <span *ngFor="let author of book.authors; last as l">
+        {{ author }}<span *ngIf="!l">, </span>
+      </span>
+      <br>
+      ISBN {{ book.isbn }}
+    </div>
   </div>
-</div>
+</ng-container>

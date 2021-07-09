@@ -12,7 +12,7 @@ import { BookStoreService } from '../shared/book-store.service';
 })
 export class EditBookComponent implements OnInit {
 
-  book: Book;
+  book?: Book;
 
   constructor(
     private bs: BookStoreService,
@@ -22,8 +22,8 @@ export class EditBookComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.pipe(
-      map(params => params.get('isbn')),
-      switchMap((isbn: string) => this.bs.getSingle(isbn))
+      map(params => params.get('isbn') || ''),
+      switchMap(isbn => this.bs.getSingle(isbn))
     )
     .subscribe(book => this.book = book);
   }

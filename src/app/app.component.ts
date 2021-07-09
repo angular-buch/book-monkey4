@@ -11,8 +11,8 @@ declare var window: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  repositoryUrl: string;
-  repoName: string;
+  repositoryUrl: string = '';
+  repoName: string = '';
   mobileLayout = false;
   showSidebar = false;
 

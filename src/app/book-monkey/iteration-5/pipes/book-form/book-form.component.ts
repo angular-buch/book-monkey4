@@ -14,41 +14,14 @@ export class BookFormComponent implements OnInit, OnChanges {
 
   bookForm: FormGroup;
 
-  @Input() book: Book;
+  @Input() book?: Book;
   @Input() editing = false;
   @Output() submitBook = new EventEmitter<Book>();
 
   constructor(
     private fb: FormBuilder,
     private bookExistsValidator: BookExistsValidatorService
-  ) { }
-
-  ngOnInit(): void {
-    this.initForm();
-  }
-
-  ngOnChanges() {
-    this.initForm();
-    this.setFormValues(this.book);
-  }
-
-  private setFormValues(book: Book) {
-    this.bookForm.patchValue(book);
-
-    this.bookForm.setControl(
-      'authors',
-      this.buildAuthorsArray(book.authors)
-    );
-
-    this.bookForm.setControl(
-      'thumbnails',
-      this.buildThumbnailsArray(book.thumbnails)
-    );
-  }
-
-  private initForm() {
-    if (this.bookForm) { return; }
-
+  ) {
     this.bookForm = this.fb.group({
       title: ['', Validators.required],
       subtitle: [''],
@@ -67,6 +40,30 @@ export class BookFormComponent implements OnInit, OnChanges {
       ]),
       published: []
     });
+  }
+
+  ngOnInit(): void {}
+
+  ngOnChanges() {
+    if (this.book) {
+      this.setFormValues(this.book);
+    }
+  }
+
+  private setFormValues(book: Book) {
+    this.bookForm.patchValue(book);
+
+    this.bookForm.setControl(
+      'authors',
+      this.buildAuthorsArray(book.authors)
+    );
+
+    if (book.thumbnails) {
+      this.bookForm.setControl(
+        'thumbnails',
+        this.buildThumbnailsArray(book.thumbnails)
+      );
+    };
   }
 
   private buildAuthorsArray(values: string[]): FormArray {
@@ -100,11 +97,11 @@ export class BookFormComponent implements OnInit, OnChanges {
   submitForm() {
     const formValue = this.bookForm.value;
     const authors = formValue.authors
-              .filter(author => author);
+              .filter((author: string) => author);
     const thumbnails = formValue.thumbnails
-              .filter(thumbnail => thumbnail.url);
+              .filter((thumbnail: Thumbnail) => thumbnail.url);
 
-    const isbn = this.editing ? this.book.isbn : formValue.isbn;
+    const isbn = this.editing && this.book ? this.book.isbn : formValue.isbn;
 
     const newBook: Book = {
       ...formValue,

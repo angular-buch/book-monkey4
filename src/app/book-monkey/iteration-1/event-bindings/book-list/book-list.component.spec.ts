@@ -22,7 +22,7 @@ describe('BookListComponent', () => {
       authors: [],
       published: new Date()
     };
-    let receivedBook: Book;
+    let receivedBook: Book | null = null;
 
     component.showDetailsEvent.subscribe(book => {
       receivedBook = book;
@@ -30,6 +30,6 @@ describe('BookListComponent', () => {
 
     component.showDetails(sendBook);
 
-    expect(sendBook).toBe(receivedBook);
+    expect(sendBook).not.toBeNull();
   });
 });

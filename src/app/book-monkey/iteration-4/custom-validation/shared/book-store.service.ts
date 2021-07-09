@@ -78,7 +78,8 @@ export class BookStoreService {
   }
 
   check(isbn: string): Observable<boolean> {
-    return this.http.get(
+    // ⚠️ Unterschied zum Buch: Der generische Typ `boolean` muss angegeben werden, sonst wird `Object` angenommen
+    return this.http.get<boolean>(
       `${this.api}/book/${isbn}/check`
     ).pipe(
       catchError(this.errorHandler)

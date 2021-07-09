@@ -12,7 +12,8 @@ import { BookStoreService } from '../shared/book-store.service';
 })
 export class EditBookComponent implements OnInit {
 
-  book: Book;
+  // ⚠️ Unterschied zum Buch: Property ist optional, sonst muss es direkt zugewiesen werden.
+  book?: Book;
 
   constructor(
     private bs: BookStoreService,
@@ -21,9 +22,14 @@ export class EditBookComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    /** ⚠️ Unterschied zum Buch:
+     * Der Typ des Routen-Parameters ist `string | null`. Die Methode `getSingle()` erwartet allerdings `string`.
+     * Wir definieren deshalb hier einen leeren String als Fallback-Wert. So wird der Typ in jedem Fall `string`.
+     * Der Typ des Arguments `isbn` im `switchMap` ist damit auch überflüssig.
+     */
     this.route.paramMap.pipe(
-      map(params => params.get('isbn')),
-      switchMap((isbn: string) => this.bs.getSingle(isbn))
+      map(params => params.get('isbn') || ''),
+      switchMap(isbn => this.bs.getSingle(isbn))
     )
     .subscribe(book => this.book = book);
   }

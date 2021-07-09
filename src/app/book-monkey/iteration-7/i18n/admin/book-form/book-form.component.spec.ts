@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA, DebugElement } from '@angular/core';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -30,7 +30,7 @@ describe('BookFormComponent', () => {
     isbn: '',
     title: '',
     authors: [''],
-    published: null,
+    published: new Date(),
     subtitle: '',
     thumbnails: [{
       title: '',
@@ -39,7 +39,7 @@ describe('BookFormComponent', () => {
     description: ''
   };
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ BookFormComponent ],
       schemas: [ NO_ERRORS_SCHEMA ],
@@ -59,7 +59,10 @@ describe('BookFormComponent', () => {
   });
 
   it('should initialize the form', () => {
-    expect(component.bookForm.value).toEqual(emptyBookData);
+    expect(component.bookForm.value).toEqual({
+      ...emptyBookData,
+      published: null
+    });
     expect(component.bookForm.valid).toBeFalsy();
   });
 
@@ -74,6 +77,7 @@ describe('BookFormComponent', () => {
     component.addAuthorControl();
     expect(component.bookForm.value).toEqual({
       ...emptyBookData,
+      published: null,
       authors: ['', '']
     });
   });
@@ -82,6 +86,7 @@ describe('BookFormComponent', () => {
     component.addThumbnailControl();
     expect(component.bookForm.value).toEqual({
       ...emptyBookData,
+      published: null,
       thumbnails: [{
         title: '',
         url: ''
@@ -99,8 +104,8 @@ describe('BookFormComponent', () => {
     // check if empty elements will be filtered out
     component.book = {
       ...expectedBook,
-      authors: [ ...expectedBook.authors, '', null ],
-      thumbnails: [ ...expectedBook.thumbnails,
+      authors: [ ...expectedBook.authors, '' ],
+      thumbnails: [ ...expectedBook.thumbnails || [] as any,
         { url: '', title: 'should be filtered out' },
         { url: '', title: null },
         { url: null, title: '' }
@@ -116,7 +121,7 @@ describe('BookFormComponent', () => {
     expect(component.bookForm.value).toEqual({
       isbn: null,
       title: null,
-      authors: [ null, null, null ],
+      authors: [ null, null ],
       published: null,
       subtitle: null,
       thumbnails: [

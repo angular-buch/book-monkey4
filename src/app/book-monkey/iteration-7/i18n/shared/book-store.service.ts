@@ -78,14 +78,14 @@ export class BookStoreService {
   }
 
   check(isbn: string): Observable<boolean> {
-    return this.http.get(
+    return this.http.get<boolean>(
       `${this.api}/book/${isbn}/check`
     ).pipe(
       catchError(this.errorHandler)
     );
   }
 
-  private errorHandler(error: HttpErrorResponse): Observable<any> {
+  private errorHandler(error: HttpErrorResponse): Observable<never> {
     console.error('Fehler aufgetreten!');
     return throwError(error);
   }

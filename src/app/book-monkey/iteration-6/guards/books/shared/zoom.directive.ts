@@ -4,7 +4,7 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
   selector: '[bmZoom]'
 })
 export class ZoomDirective {
-  @HostBinding('class.small') isZoomed: boolean;
+  @HostBinding('class.small') isZoomed: boolean = false;
 
   @HostListener('mouseenter') onMouseEnter() {
     this.isZoomed = true;

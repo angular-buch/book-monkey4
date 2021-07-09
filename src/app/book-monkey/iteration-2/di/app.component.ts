@@ -10,7 +10,7 @@ type ViewState = 'list' | 'details';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  book: Book;
+  book?: Book;
   viewState: ViewState = 'list';
 
   showList() {

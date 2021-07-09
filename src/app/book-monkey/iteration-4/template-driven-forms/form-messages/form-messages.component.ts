@@ -8,10 +8,16 @@ import { AbstractControl } from '@angular/forms';
 })
 export class FormMessagesComponent implements OnInit {
 
-  @Input() control: AbstractControl;
-  @Input() controlName: string;
+  /** ⚠️ Unterschied zum Buch:
+   * Propertys sind optional, sonst müssen sie direkt zugewiesen werden.
+   * Der Typ von `control` muss auf `AbstractControl | null` gesetzt werden, denn das ist der
+   * korrekte Rückgabetyp von `FormGroup.get()`
+   */
+  @Input() control?: AbstractControl | null;
+  @Input() controlName?: string;
 
-  private allMessages = {
+  // ⚠️ Unterschied zum Buch: Property mit korrekter Typisierung, siehe auch `this.errorsForControl()`
+  private allMessages: { [key: string]: { [key: string]: string } } = {
     title: {
       required: 'Ein Buchtitel muss angegeben werden.'
     },
@@ -34,14 +40,16 @@ export class FormMessagesComponent implements OnInit {
   }
 
   errorsForControl(): string[] {
-    const messages = this.allMessages[this.controlName];
+    // ⚠️ Unterschied zum Buch: Verbesserte und korrekte Typisierung
+    type allMessagesKey = keyof FormMessagesComponent['allMessages'];
+    const messages = this.allMessages[this.controlName as keyof allMessagesKey];
 
     if (
       !this.control ||
       !this.control.errors ||
       !messages ||
       !this.control.dirty
-    ) { return null; }
+    ) { return []; } // ⚠️ Unterschied zum Buch: Leeres Array statt `null`, sodass Return-Typ `string[]` erfüllt ist
 
     return Object.keys(this.control.errors)
       .map(err => messages[err]);

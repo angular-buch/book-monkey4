@@ -8,7 +8,12 @@ import { Book } from '../shared/book';
   styleUrls: ['./book-details.component.css']
 })
 export class BookDetailsComponent implements OnInit {
-  @Input() book: Book;
+  /** ⚠️ Unterschied zum Buch:
+   * Property ist optional, sonst muss es direkt zugewiesen werden.
+   * Das Input-Property wird allerdings zur Laufzeit der Komponente durch das Property Binding zugewiesen.
+   * Da dieses Binding nicht verpflichtend ist, muss das Property auch optional sein.
+   */
+  @Input() book?: Book;
   @Output() showListEvent = new EventEmitter<any>();
 
   ngOnInit(): void {

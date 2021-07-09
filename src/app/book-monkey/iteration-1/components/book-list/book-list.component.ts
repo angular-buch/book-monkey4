@@ -8,7 +8,14 @@ import { Book } from '../shared/book';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent implements OnInit {
-  books: Book[];
+  /** ⚠️ Unterschied zum Buch:
+   * Property mit leerem Array initialisieren. Dadurch, dass die endgültige Zuweisung der Buchliste
+   * erst im ngOnInit() passiert, ist `books` aus Sicht der Klasse nicht immer mit einem Wert belegt.
+   * Das kann durch eine direkte Zuweisung umgangen werden.
+   * Prinzipiell reicht an dieser Stelle auch die Zuweisung der Liste im constructor.
+   * In späteren Iterationen im Zusammenhang mit HTTP werden wir den Standardwert hier aber noch benötigen.
+   */ 
+  books: Book[] = [];
 
   ngOnInit(): void {
     this.books = [

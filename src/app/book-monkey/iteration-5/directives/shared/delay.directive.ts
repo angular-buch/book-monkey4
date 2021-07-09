@@ -4,7 +4,8 @@ import { Directive, OnInit, Input, TemplateRef, ViewContainerRef } from '@angula
   selector: '[bmDelay]'
 })
 export class DelayDirective implements OnInit {
-  @Input() bmDelay: number;
+  // ⚠️ Unterschied zum Buch: Initialwert angeben. Andernfalls muss das Property optional sein.
+  @Input() bmDelay: number = 100;
 
   constructor(
     private templateRef: TemplateRef<any>,

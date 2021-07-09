@@ -9,7 +9,7 @@ import { BookStoreService } from '../shared/book-store.service';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent implements OnInit {
-  books: Book[];
+  books: Book[] = [];
   @Output() showDetailsEvent = new EventEmitter<Book>();
 
   constructor(private bs: BookStoreService) { }

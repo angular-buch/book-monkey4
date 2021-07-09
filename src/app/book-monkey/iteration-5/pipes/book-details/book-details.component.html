@@ -17,7 +17,7 @@
       <h4>Erschienen</h4>
       {{ book.published | date:'longDate' }}
     </div>
-    <div class="four wide column">
+    <div class="four wide column" *ngIf="book.rating">
       <h4>Rating</h4>
       <i class="yellow star icon"
         *ngFor="let r of getRating(book.rating)"></i>

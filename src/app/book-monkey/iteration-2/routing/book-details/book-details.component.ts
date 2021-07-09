@@ -10,7 +10,8 @@ import { BookStoreService } from '../shared/book-store.service';
   styleUrls: ['./book-details.component.css']
 })
 export class BookDetailsComponent implements OnInit {
-  book: Book;
+  // ⚠️ Unterschied zum Buch: Property ist optional, sonst muss es direkt zugewiesen werden.
+  book?: Book;
 
   constructor(
     private bs: BookStoreService,
@@ -19,7 +20,11 @@ export class BookDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const params = this.route.snapshot.paramMap;
-    this.book = this.bs.getSingle(params.get('isbn'));
+    /** ⚠️ Unterschied zum Buch:
+     * Der Typ des Routen-Parameters ist `string | null`. Die Methode `getSingle()` erwartet allerdings `string`.
+     * Wir definieren deshalb hier einen leeren String als Fallback-Wert. So wird der Typ in jedem Fall `string`.
+     */
+    this.book = this.bs.getSingle(params.get('isbn') || '');
   }
 
   getRating(num: number) {

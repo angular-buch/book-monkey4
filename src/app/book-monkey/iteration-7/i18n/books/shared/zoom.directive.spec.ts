@@ -1,5 +1,5 @@
 import { Component, DebugElement } from '@angular/core';
-import { TestBed, ComponentFixture, async } from '@angular/core/testing';
+import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { ZoomDirective } from './zoom.directive';
@@ -15,7 +15,7 @@ describe('ZoomDirective', () => {
   let fixture: ComponentFixture<TestZoomComponent>;
   let pEl: DebugElement;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
         TestZoomComponent,

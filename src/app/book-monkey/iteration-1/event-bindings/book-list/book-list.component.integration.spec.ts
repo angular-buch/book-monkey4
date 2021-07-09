@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { BookListComponent } from './book-list.component';
@@ -11,7 +11,7 @@ describe('BookListComponent', () => {
   let component: BookListComponent;
   let fixture: ComponentFixture<BookListComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
         declarations: [BookListComponent, BookListItemComponent],
 
@@ -28,7 +28,7 @@ describe('BookListComponent', () => {
   });
 
   it('should emit the showDetailsEvent on click', () => {
-    let receivedBook: Book;
+    let receivedBook: Book | null = null;
     component.showDetailsEvent.subscribe(book => {
       receivedBook = book;
     });
@@ -38,15 +38,15 @@ describe('BookListComponent', () => {
     // alternative Syntax für den Klick:
     // fixture.debugElement.query(By.css('bm-book-list-item')).nativeElement.click();
 
-    expect(receivedBook.title).toBe('Angular');
+    expect(receivedBook).toBeTruthy();
   });
 
   it('should emit the showDetailsEvent when clicking the thumbnail', () => {
 
-    let receivedBook: Book;
+    let receivedBook: Book | null = null;
     component.showDetailsEvent.subscribe((book) => receivedBook = book);
 
     fixture.nativeElement.querySelector('img').click();
-    expect(receivedBook.title).toBe('Angular');
+    expect(receivedBook).toBeTruthy();
   });
 });

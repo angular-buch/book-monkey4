@@ -43,7 +43,8 @@ export class BookStoreService {
     return this.books;
   }
 
-  getSingle(isbn: string): Book {
+  // ⚠️ Unterschied zum Buch: Der Rückgabetyp ist hier korrekt `Book | undefined`, weil die Suche mit `find()` auch ergebnislos sein kann.
+  getSingle(isbn: string): Book | undefined {
     return this.books.find(book => book.isbn === isbn);
   }
 }

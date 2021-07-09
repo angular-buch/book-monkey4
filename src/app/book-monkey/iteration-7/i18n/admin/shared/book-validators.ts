@@ -1,8 +1,8 @@
-import { FormControl, FormArray, ValidationErrors } from '@angular/forms';
+import { FormArray, ValidationErrors, AbstractControl } from '@angular/forms';
 
 export class BookValidators {
 
-  static isbnFormat(control: FormControl): ValidationErrors | null {
+  static isbnFormat(control: AbstractControl): ValidationErrors | null {
     if (!control.value) { return null; }
 
     const numbers = control.value.replace(/-/g, '');
@@ -17,8 +17,8 @@ export class BookValidators {
     }
   }
 
-  static atLeastOneAuthor(controlArray: FormArray): ValidationErrors | null {
-    if (controlArray.controls.some(el => el.value)) {
+  static atLeastOneAuthor(controlArray: AbstractControl): ValidationErrors | null {
+    if ((controlArray as FormArray).controls.some((el: AbstractControl) => el.value)) {
       return null;
     } else {
       return {

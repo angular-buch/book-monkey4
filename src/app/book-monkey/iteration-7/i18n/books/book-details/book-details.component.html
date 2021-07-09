@@ -23,7 +23,7 @@
       </h4>
       {{ book.published | date:'longDate' }}
     </div>
-    <div class="four wide column">
+    <div class="four wide column" *ngIf="book.rating">
       <h4 i18n="@@BookDetailsComponent:book rating">
         Rating
       </h4>

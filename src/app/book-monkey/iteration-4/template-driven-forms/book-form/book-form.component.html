@@ -8,8 +8,13 @@
     [(ngModel)]="book.title"
     required
     #titleInput="ngModel">
+  <!-- ⚠️ Unterschied zum Buch:
+  Die Referenz `titleInput` zeigt auf die Direktive `ngModel`, nicht auf ein Control.
+  Zugriff auf das Control erhalten wir hier über die Property `control` auf `ngModel`.
+  Diese Änderung gilt auch für alle anderen Stellen in diesem Template.
+  Es handelt sich um einen Fehler im gedruckten Buch. -->
   <bm-form-messages
-    [control]="titleInput"
+    [control]="titleInput.control"
     controlName="title">
   </bm-form-messages>
 
@@ -27,7 +32,7 @@
     maxlength="13"
     #isbnInput="ngModel">
   <bm-form-messages
-    [control]="isbnInput"
+    [control]="isbnInput.control"
     controlName="isbn">
   </bm-form-messages>
 
@@ -40,7 +45,7 @@
     required
     #dateInput="ngModel">
   <bm-form-messages
-    [control]="dateInput"
+    [control]="dateInput.control"
     controlName="published">
   </bm-form-messages>
 
@@ -51,7 +56,7 @@
     required
     #authorInput="ngModel">
   <bm-form-messages
-    [control]="authorInput"
+    [control]="authorInput.control"
     controlName="authors">
   </bm-form-messages>
 
@@ -61,17 +66,20 @@
     [(ngModel)]="book.description"></textarea>
 
   <label>Bild</label>
+  <!-- ⚠️ Unterschied zum Buch:
+  Mit $any() haben wir hier die Typprüfung deaktiviert! Das ist ausdrücklich ein Workaround.
+  -->
   <div class="two fields">
     <div class="field">
       <input
         name="url"
-        [(ngModel)]="book.thumbnails[0].url"
+        [(ngModel)]="$any(book).thumbnails[0].url"
         placeholder="URL">
     </div>
     <div class="field">
       <input
         name="title"
-        [(ngModel)]="book.thumbnails[0].title"
+        [(ngModel)]="$any(book).thumbnails[0].title"
         placeholder="Titel">
     </div>
   </div>

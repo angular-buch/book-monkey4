@@ -17,7 +17,10 @@
       <h4>Erschienen</h4>
       {{ book.published }}
     </div>
-    <div class="four wide column">
+    <!-- ⚠️ Unterschied zum Buch:
+    div mit ngIf nur anzeigen, wenn book.rating definiert ist.
+    Das ist notwendig, weil das Rating optional ist. -->
+    <div class="four wide column" *ngIf="book.rating">
       <h4>Rating</h4>
       <i class="yellow star icon"
         *ngFor="let r of getRating(book.rating)"></i>
