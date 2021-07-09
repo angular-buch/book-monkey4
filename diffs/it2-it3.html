@@ -110,7 +110,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       </svg>      <a href="#d2h-819874" class="d2h-file-name">tmp/src/app/book-monkey/{iteration-2/routing → iteration-3/interceptors}/book-details/book-details.component.ts</a>
       <span class="d2h-file-stats">
           <span class="d2h-lines-added">+11</span>
-          <span class="d2h-lines-deleted">-2</span>
+          <span class="d2h-lines-deleted">-3</span>
       </span>
     </span>
 </li>
@@ -1343,7 +1343,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line d2h-info">@@ -14,15 +14,24 @@</div>
+        <div class="d2h-code-side-line d2h-info">@@ -14,16 +14,24 @@</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
@@ -1442,27 +1442,17 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line d2h-del d2h-change">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    this.<del>book = this.</del>bs.getSingle(params.get(&#x27;isbn&#x27;))<del>;</del></span>
+            <span class="d2h-code-line-ctn">    </span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
+    <td class="d2h-code-side-linenumber d2h-del d2h-change">
       23
     </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line d2h-cntx">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  }</span>
+    <td class="d2h-del d2h-change">
+        <div class="d2h-code-side-line d2h-del d2h-change">
+            <span class="d2h-code-line-prefix">-</span>
+            <span class="d2h-code-line-ctn"><del>    this</del>.<del>book</del> <del>=</del> this.<del>bs.getSingle(params.get(&#x27;isbn&#x27;)</del> <del>||</del> <del>&#x27;&#x27;</del>);</span>
         </div>
     </td>
 </tr><tr>
@@ -1472,7 +1462,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -1482,7 +1472,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  getRating(num: number) {</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
         </div>
     </td>
 </tr><tr>
@@ -1492,12 +1482,22 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    return new Array(num);</span>
+            <span class="d2h-code-line-ctn">  getRating(num: number) {</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
       27
+    </td>
+    <td class="d2h-cntx">
+        <div class="d2h-code-side-line d2h-cntx">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">    return new Array(num);</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">
+      28
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
@@ -1577,7 +1577,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      28
+      29
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
@@ -1751,17 +1751,17 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line d2h-ins d2h-change">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.bs.getSingle(params.get(&#x27;isbn&#x27;))</span>
+            <span class="d2h-code-line-ctn">    <ins>this.bs.getSingle(params.get(&#x27;isbn&#x27;) || &#x27;&#x27;)</ins></span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
+    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
       24
     </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
+    <td class="d2h-ins d2h-change">
+        <div class="d2h-code-side-line d2h-ins d2h-change">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      .subscribe(b =&gt; this.book = b);</span>
+            <span class="d2h-code-line-ctn"><ins>      </ins>.<ins>subscribe(b</ins> <ins>=&gt;</ins> this.<ins>book</ins> <ins>=</ins> <ins>b</ins>);</span>
         </div>
     </td>
 </tr><tr>
@@ -1841,7 +1841,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    if (confirm(&#x27;Buch wirklich löschen?&#x27;)) {</span>
+            <span class="d2h-code-line-ctn">    if (this.book &amp;&amp; confirm(&#x27;Buch wirklich löschen?&#x27;)) {</span>
         </div>
     </td>
 </tr><tr>
@@ -2687,7 +2687,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    &lt;input type=&quot;text&quot; class=&quot;prompt&quot;</span>
+            <span class="d2h-code-line-ctn">    &lt;input type=&quot;text&quot; class=&quot;prompt&quot; #input</span>
         </div>
     </td>
 </tr><tr>
@@ -2697,7 +2697,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      (keyup)=&quot;keyUp$.next($event.target.value)&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">      (keyup)=&quot;keyUp$.next(input.value)&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -4729,7 +4729,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line d2h-del d2h-change">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  <del>getSingle</del>(<del>isbn</del>: <del>string</del>): <del>Book</del> {</span>
+            <span class="d2h-code-line-ctn">  <del>getSingle</del>(<del>isbn</del>: <del>string</del>): <del>Book</del> <del>| undefined </del>{</span>
         </div>
     </td>
 </tr><tr>

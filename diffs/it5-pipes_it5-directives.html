@@ -588,7 +588,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    &lt;div class=&quot;four wide column&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">    &lt;div class=&quot;four wide column&quot; *ngIf=&quot;book.rating&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -722,7 +722,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    &lt;div class=&quot;four wide column&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">    &lt;div class=&quot;four wide column&quot; *ngIf=&quot;book.rating&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -1267,7 +1267,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line d2h-info">@@ -1,6 +1,7 @@</div>
+        <div class="d2h-code-side-line d2h-info">@@ -1,7 +1,8 @@</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
@@ -1276,7 +1276,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">&lt;img class=&quot;ui tiny image&quot;</span>
+            <span class="d2h-code-line-ctn">&lt;ng-container *ngIf=&quot;book&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -1286,17 +1286,27 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">     *ngIf=&quot;book.thumbnails &amp;&amp; book.thumbnails[0] &amp;&amp; book.thumbnails[0].url&quot;</span>
+            <span class="d2h-code-line-ctn">  &lt;img class=&quot;ui tiny image&quot;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">
+      3
+    </td>
+    <td class="d2h-cntx">
+        <div class="d2h-code-side-line d2h-cntx">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">      *ngIf=&quot;book.thumbnails &amp;&amp; book.thumbnails[0] &amp;&amp; book.thumbnails[0].url&quot;</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      3
+      4
     </td>
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line d2h-del d2h-change">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">     [src]=&quot;book.thumbnails[0].url&quot;<del>&gt;</del></span>
+            <span class="d2h-code-line-ctn">      [src]=&quot;book.thumbnails[0].url&quot;<del>&gt;</del></span>
         </div>
     </td>
 </tr><tr>
@@ -1311,22 +1321,12 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      4
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line d2h-cntx">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">&lt;div class=&quot;content&quot;&gt;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
       5
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  &lt;div class=&quot;header&quot;&gt;{{ book.title }}&lt;&#x2F;div&gt;</span>
+            <span class="d2h-code-line-ctn">  &lt;div class=&quot;content&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -1336,7 +1336,17 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  &lt;div *ngIf=&quot;book.subtitle&quot; class=&quot;description&quot;&gt;{{ book.subtitle }}&lt;&#x2F;div&gt;</span>
+            <span class="d2h-code-line-ctn">    &lt;div class=&quot;header&quot;&gt;{{ book.title }}&lt;&#x2F;div&gt;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">
+      7
+    </td>
+    <td class="d2h-cntx">
+        <div class="d2h-code-side-line d2h-cntx">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">    &lt;div *ngIf=&quot;book.subtitle&quot; class=&quot;description&quot;&gt;{{ book.subtitle }}&lt;&#x2F;div&gt;</span>
         </div>
     </td>
 </tr>
@@ -1360,7 +1370,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">&lt;img class=&quot;ui tiny image&quot;</span>
+            <span class="d2h-code-line-ctn">&lt;ng-container *ngIf=&quot;book&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -1370,37 +1380,37 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">     *ngIf=&quot;book.thumbnails &amp;&amp; book.thumbnails[0] &amp;&amp; book.thumbnails[0].url&quot;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      3
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line d2h-ins d2h-change">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">     [src]=&quot;book.thumbnails[0].url&quot;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      4
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">     bmZoom&gt;</span>
+            <span class="d2h-code-line-ctn">  &lt;img class=&quot;ui tiny image&quot;</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      5
+      3
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">&lt;div class=&quot;content&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">      *ngIf=&quot;book.thumbnails &amp;&amp; book.thumbnails[0] &amp;&amp; book.thumbnails[0].url&quot;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
+      4
+    </td>
+    <td class="d2h-ins d2h-change">
+        <div class="d2h-code-side-line d2h-ins d2h-change">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      [src]=&quot;book.thumbnails[0].url&quot;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      5
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      bmZoom&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -1410,7 +1420,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  &lt;div class=&quot;header&quot;&gt;{{ book.title }}&lt;&#x2F;div&gt;</span>
+            <span class="d2h-code-line-ctn">  &lt;div class=&quot;content&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -1420,7 +1430,17 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  &lt;div *ngIf=&quot;book.subtitle&quot; class=&quot;description&quot;&gt;{{ book.subtitle }}&lt;&#x2F;div&gt;</span>
+            <span class="d2h-code-line-ctn">    &lt;div class=&quot;header&quot;&gt;{{ book.title }}&lt;&#x2F;div&gt;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">
+      8
+    </td>
+    <td class="d2h-cntx">
+        <div class="d2h-code-side-line d2h-cntx">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">    &lt;div *ngIf=&quot;book.subtitle&quot; class=&quot;description&quot;&gt;{{ book.subtitle }}&lt;&#x2F;div&gt;</span>
         </div>
     </td>
 </tr>
@@ -1908,7 +1928,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  @Input() bmDelay: number;</span>
+            <span class="d2h-code-line-ctn">  @Input() bmDelay: number = 100;</span>
         </div>
     </td>
 </tr><tr>
@@ -2297,7 +2317,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  @HostBinding(&#x27;class.small&#x27;) isZoomed: boolean;</span>
+            <span class="d2h-code-line-ctn">  @HostBinding(&#x27;class.small&#x27;) isZoomed: boolean = false;</span>
         </div>
     </td>
 </tr><tr>
