@@ -14,7 +14,23 @@ export class BookFormComponent implements OnInit, OnChanges {
 
   // ⚠️ Unterschied zum Buch: Property ist optional, sonst muss es direkt zugewiesen werden.
   @Input() book?: Book;
-  @Input() editing = false;
+
+  /** ⚠️ Unterschied zum Buch:
+   * Wir verwenden hier kein Property mehr, sondern einen Setter.
+   * Bei jeder Änderung von `this.editing` wird diese Funktion ausgeführt.
+   * Abhängig vom Zustand können wir darin das ISBN-Feld (de-)aktivieren.
+   * Wir wissen sicher, dass ein Control mit dem Namen `isbn` existiert,
+   * also können wir eine Non-Null Assertion verwenden (Ausrufezeichen).
+   */
+  @Input() set editing(isEditing: boolean) {
+    const isbnControl = this.bookForm.get('isbn')!;
+    if (isEditing) {
+      isbnControl.disable();
+    } else {
+      isbnControl.enable();
+    }
+  };
+
   @Output() submitBook = new EventEmitter<Book>();
 
   constructor(private fb: FormBuilder) {
@@ -28,7 +44,8 @@ export class BookFormComponent implements OnInit, OnChanges {
     this.bookForm = this.fb.group({
       title: ['', Validators.required],
       subtitle: [''],
-      isbn: [{ value: '', disabled: this.editing }, [
+      // ⚠️ Unterschied zum Buch: disabled-Status wird jetzt programmatisch gesetzt, nicht per Deklaration im Model
+      isbn: ['', [
         Validators.required,
         Validators.minLength(10),
         Validators.maxLength(13)
@@ -116,8 +133,9 @@ export class BookFormComponent implements OnInit, OnChanges {
     const thumbnails = formValue.thumbnails
               .filter((thumbnail: Thumbnail) => thumbnail.url);
 
-    // ⚠️ Unterschied zum Buch: Existenzprüfung auf `this.book`, weil optionales Property
-    const isbn = this.editing && this.book ? this.book.isbn : formValue.isbn;
+    // ⚠️ Unterschied zum Buch: Existenzprüfung auf `this.book`, weil optionales Property.
+    // Außerdem verwenden wir `this.editing` nicht mehr, weil es sich nicht mehr um ein Property handelt, sondern einen Setter
+    const isbn = this.book ? this.book.isbn : formValue.isbn;
 
     const newBook: Book = {
       ...formValue,

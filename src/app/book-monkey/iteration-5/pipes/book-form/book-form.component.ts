@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, Validators, AbstractControl } from '@angular/forms';
 
 import { Book, Thumbnail } from '../shared/book';
 import { BookValidators } from '../shared/book-validators';
@@ -15,7 +15,16 @@ export class BookFormComponent implements OnInit, OnChanges {
   bookForm: FormGroup;
 
   @Input() book?: Book;
-  @Input() editing = false;
+  @Input() set editing(isEditing: boolean) {
+    const isbnControl = this.bookForm.get('isbn')!;
+    if (isEditing) {
+      isbnControl.clearAsyncValidators();
+      isbnControl.disable();
+    } else {
+      isbnControl.setAsyncValidators(control => this.bookExistsValidator.validate(control));
+      isbnControl.enable();
+    }
+  };
   @Output() submitBook = new EventEmitter<Book>();
 
   constructor(
@@ -25,13 +34,12 @@ export class BookFormComponent implements OnInit, OnChanges {
     this.bookForm = this.fb.group({
       title: ['', Validators.required],
       subtitle: [''],
-      isbn: [
-        { value: '', disabled: this.editing },
+      isbn: ['',
         [
           Validators.required,
           BookValidators.isbnFormat
         ],
-        this.editing ? null : [this.bookExistsValidator]
+        (control: AbstractControl) => this.bookExistsValidator.validate(control)
       ],
       description: [''],
       authors: this.buildAuthorsArray(['']),
@@ -101,7 +109,7 @@ export class BookFormComponent implements OnInit, OnChanges {
     const thumbnails = formValue.thumbnails
               .filter((thumbnail: Thumbnail) => thumbnail.url);
 
-    const isbn = this.editing && this.book ? this.book.isbn : formValue.isbn;
+    const isbn = this.book ? this.book.isbn : formValue.isbn;
 
     const newBook: Book = {
       ...formValue,
