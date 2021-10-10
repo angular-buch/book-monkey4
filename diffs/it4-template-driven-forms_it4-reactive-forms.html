@@ -133,8 +133,8 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           <path d="M6 9H3V7h3V4l5 4-5 4V9z m8-7v12c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h12c0.55 0 1 0.45 1 1z m-1 0H1v12h12V2z"></path>
       </svg>      <a href="#d2h-174246" class="d2h-file-name">tmp/src/app/book-monkey/iteration-4/{template-driven-forms → reactive-forms}/book-form/book-form.component.ts</a>
       <span class="d2h-file-stats">
-          <span class="d2h-lines-added">+97</span>
-          <span class="d2h-lines-deleted">-14</span>
+          <span class="d2h-lines-added">+106</span>
+          <span class="d2h-lines-deleted">-13</span>
       </span>
     </span>
 </li>
@@ -3266,7 +3266,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line d2h-info">@@ -1,30 +1,113 @@</div>
+        <div class="d2h-code-side-line d2h-info">@@ -1,30 +1,123 @@</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-del d2h-change">
@@ -3419,33 +3419,13 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
+    <td class="d2h-code-side-linenumber d2h-del d2h-change">
       16
     </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line d2h-cntx">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  @Output() submitBook = new EventEmitter&lt;Book&gt;();</span>
+    <td class="d2h-del d2h-change">
+        <div class="d2h-code-side-line d2h-del d2h-change">
+            <span class="d2h-code-line-prefix">-</span>
+            <span class="d2h-code-line-ctn">  @<del>Output</del>() <del>submitBook</del> <del>= new EventEmitter&lt;</del>Book<del>&gt;()</del>;</span>
         </div>
     </td>
 </tr><tr>
@@ -3479,12 +3459,12 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
+    <td class="d2h-code-side-linenumber d2h-cntx">
       20
     </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line d2h-del d2h-change">
-            <span class="d2h-code-line-prefix">-</span>
+    <td class="d2h-cntx">
+        <div class="d2h-code-side-line d2h-cntx">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
             <span class="d2h-code-line-ctn">  </span>
         </div>
     </td>
@@ -3495,7 +3475,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line d2h-del d2h-change">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn"><del>  submitForm() {</del></span>
+            <span class="d2h-code-line-ctn">  <del>submitForm</del>() {</span>
         </div>
     </td>
 </tr><tr>
@@ -3505,16 +3485,76 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line d2h-del d2h-change">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    this.<del>submitBook</del>.<del>emit</del>(<del>this.book);</del></span>
+            <span class="d2h-code-line-ctn">    this.<del>submitBook</del>.<del>emit</del>(<del>this.book</del>)<del>;</del></span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">
       23
     </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line d2h-del d2h-change">
-            <span class="d2h-code-line-prefix">-</span>
+    <td class="d2h-cntx">
+        <div class="d2h-code-side-line d2h-cntx">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
             <span class="d2h-code-line-ctn">&nbsp;</span>
         </div>
     </td>
@@ -3525,7 +3565,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line d2h-del d2h-change">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn"><del>    this.book</del> <del>= BookFactory.empty();</del></span>
+            <span class="d2h-code-line-ctn"><del>    this.book</del> = <del>BookFactory.empty</del>();</span>
         </div>
     </td>
 </tr><tr>
@@ -3535,7 +3575,67 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line d2h-del d2h-change">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn"><del>    </del>this.<del>form?.reset();</del></span>
+            <span class="d2h-code-line-ctn"><del>    this.form?.reset();</del></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
         </div>
     </td>
 </tr><tr>
@@ -4593,23 +4693,43 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
+    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
       15
     </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
+    <td class="d2h-ins d2h-change">
+        <div class="d2h-code-side-line d2h-ins d2h-change">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  @Input() book?: Book;</span>
+            <span class="d2h-code-line-ctn">  @<ins>Input</ins>() <ins>book?:</ins> Book;</span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">
       16
     </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  @Input() editing = false;</span>
+    <td class="d2h-cntx">
+        <div class="d2h-code-side-line d2h-cntx">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
         </div>
     </td>
 </tr><tr>
@@ -4619,37 +4739,17 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  @Output() submitBook = new EventEmitter&lt;Book&gt;();</span>
+            <span class="d2h-code-line-ctn">  </span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
+    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
       18
     </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line d2h-cntx">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
+    <td class="d2h-ins d2h-change">
+        <div class="d2h-code-side-line d2h-ins d2h-change">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  <ins>@Input</ins>() <ins>set editing(isEditing: boolean) </ins>{</span>
         </div>
     </td>
 </tr><tr>
@@ -4659,262 +4759,52 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line d2h-ins d2h-change">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  <ins>constructor(private fb: FormBuilder) {</ins></span>
+            <span class="d2h-code-line-ctn">    <ins>const isbnControl = </ins>this.<ins>bookForm</ins>.<ins>get</ins>(<ins>&#x27;isbn&#x27;</ins>)<ins>!;</ins></span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
+    <td class="d2h-code-side-linenumber d2h-ins">
       20
     </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line d2h-ins d2h-change">
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><ins>    </ins></span>
+            <span class="d2h-code-line-ctn">    if (isEditing) {</span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
+    <td class="d2h-code-side-linenumber d2h-ins">
       21
     </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line d2h-ins d2h-change">
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.<ins>bookForm = this</ins>.<ins>fb.group</ins>(<ins>{</ins></span>
+            <span class="d2h-code-line-ctn">      isbnControl.disable();</span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
+    <td class="d2h-code-side-linenumber d2h-ins">
       22
     </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line d2h-ins d2h-change">
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><ins>      title: [&#x27;&#x27;, Validators.required],</ins></span>
+            <span class="d2h-code-line-ctn">    } else {</span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
+    <td class="d2h-code-side-linenumber d2h-ins">
       23
     </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line d2h-ins d2h-change">
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><ins>      subtitle:</ins> <ins>[&#x27;&#x27;],</ins></span>
+            <span class="d2h-code-line-ctn">      isbnControl.enable();</span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
+    <td class="d2h-code-side-linenumber d2h-ins">
       24
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line d2h-ins d2h-change">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><ins>      isbn: [{ value: &#x27;&#x27;, disabled: </ins>this.<ins>editing }, [</ins></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      25
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        Validators.required,</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      26
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        Validators.minLength(10),</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      27
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        Validators.maxLength(13)</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      28
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      ]],</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      29
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      description: [&#x27;&#x27;],</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      30
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      authors: this.buildAuthorsArray([&#x27;&#x27;]),</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      31
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      thumbnails: this.buildThumbnailsArray([</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      32
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        { title: &#x27;&#x27;, url: &#x27;&#x27; }</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      33
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      ]),</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      34
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      published: []</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      35
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      36
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line d2h-cntx">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  }</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      37
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line d2h-cntx">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      38
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line d2h-cntx">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  ngOnInit(): void {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      39
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line d2h-cntx">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  }</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      40
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      41
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  ngOnChanges() {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      42
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      43
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    if (this.book) {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      44
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      this.setFormValues(this.book);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      45
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
@@ -4924,42 +4814,252 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
-      46
+      25
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">  };</span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      47
+    <td class="d2h-code-side-linenumber d2h-cntx">
+      26
     </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
+    <td class="d2h-cntx">
+        <div class="d2h-code-side-line d2h-cntx">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
+      27
+    </td>
+    <td class="d2h-ins d2h-change">
+        <div class="d2h-code-side-line d2h-ins d2h-change">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn"><ins>  @Output()</ins> <ins>submitBook </ins>= <ins>new EventEmitter&lt;Book&gt;</ins>();</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
+      28
+    </td>
+    <td class="d2h-ins d2h-change">
+        <div class="d2h-code-side-line d2h-ins d2h-change">
             <span class="d2h-code-line-prefix">+</span>
             <span class="d2h-code-line-ctn">&nbsp;</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
-      48
+      29
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  private setFormValues(book: Book) {</span>
+            <span class="d2h-code-line-ctn">  constructor(private fb: FormBuilder) {</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
-      49
+      30
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.bookForm.patchValue(book);</span>
+            <span class="d2h-code-line-ctn">    </span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      31
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    this.bookForm = this.fb.group({</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      32
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      title: [&#x27;&#x27;, Validators.required],</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      33
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      subtitle: [&#x27;&#x27;],</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      34
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      isbn: [&#x27;&#x27;, [</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      35
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">        Validators.required,</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      36
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">        Validators.minLength(10),</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      37
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">        Validators.maxLength(13)</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      38
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      ]],</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      39
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      description: [&#x27;&#x27;],</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      40
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      authors: this.buildAuthorsArray([&#x27;&#x27;]),</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      41
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      thumbnails: this.buildThumbnailsArray([</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      42
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">        { title: &#x27;&#x27;, url: &#x27;&#x27; }</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      43
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      ]),</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      44
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      published: []</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      45
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    });</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">
+      46
+    </td>
+    <td class="d2h-cntx">
+        <div class="d2h-code-side-line d2h-cntx">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">  }</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">
+      47
+    </td>
+    <td class="d2h-cntx">
+        <div class="d2h-code-side-line d2h-cntx">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">
+      48
+    </td>
+    <td class="d2h-cntx">
+        <div class="d2h-code-side-line d2h-cntx">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">  ngOnInit(): void {</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-cntx">
+      49
+    </td>
+    <td class="d2h-cntx">
+        <div class="d2h-code-side-line d2h-cntx">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -4979,7 +5079,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.bookForm.setControl(</span>
+            <span class="d2h-code-line-ctn">  ngOnChanges() {</span>
         </div>
     </td>
 </tr><tr>
@@ -4989,7 +5089,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      &#x27;authors&#x27;,</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
         </div>
     </td>
 </tr><tr>
@@ -4999,7 +5099,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      this.buildAuthorsArray(book.authors)</span>
+            <span class="d2h-code-line-ctn">    if (this.book) {</span>
         </div>
     </td>
 </tr><tr>
@@ -5009,7 +5109,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    );</span>
+            <span class="d2h-code-line-ctn">      this.setFormValues(this.book);</span>
         </div>
     </td>
 </tr><tr>
@@ -5019,7 +5119,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
+            <span class="d2h-code-line-ctn">    }</span>
         </div>
     </td>
 </tr><tr>
@@ -5029,7 +5129,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    if (book.thumbnails) {</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -5039,7 +5139,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      this.bookForm.setControl(</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
         </div>
     </td>
 </tr><tr>
@@ -5049,7 +5149,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        &#x27;thumbnails&#x27;,</span>
+            <span class="d2h-code-line-ctn">  private setFormValues(book: Book) {</span>
         </div>
     </td>
 </tr><tr>
@@ -5059,7 +5159,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        this.buildThumbnailsArray(book.thumbnails)</span>
+            <span class="d2h-code-line-ctn">    this.bookForm.patchValue(book);</span>
         </div>
     </td>
 </tr><tr>
@@ -5069,7 +5169,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      );</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
         </div>
     </td>
 </tr><tr>
@@ -5079,7 +5179,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    };</span>
+            <span class="d2h-code-line-ctn">    this.bookForm.setControl(</span>
         </div>
     </td>
 </tr><tr>
@@ -5089,7 +5189,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">      &#x27;authors&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -5099,7 +5199,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
+            <span class="d2h-code-line-ctn">      this.buildAuthorsArray(book.authors)</span>
         </div>
     </td>
 </tr><tr>
@@ -5109,7 +5209,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
+            <span class="d2h-code-line-ctn">    );</span>
         </div>
     </td>
 </tr><tr>
@@ -5119,7 +5219,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  private buildAuthorsArray(values: string[]): FormArray {</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
         </div>
     </td>
 </tr><tr>
@@ -5129,7 +5229,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return this.fb.array(values, Validators.required);</span>
+            <span class="d2h-code-line-ctn">    if (book.thumbnails) {</span>
         </div>
     </td>
 </tr><tr>
@@ -5139,7 +5239,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">      this.bookForm.setControl(</span>
         </div>
     </td>
 </tr><tr>
@@ -5149,7 +5249,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
+            <span class="d2h-code-line-ctn">        &#x27;thumbnails&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -5159,7 +5259,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  private buildThumbnailsArray(values: Thumbnail[]): FormArray {</span>
+            <span class="d2h-code-line-ctn">        this.buildThumbnailsArray(book.thumbnails)</span>
         </div>
     </td>
 </tr><tr>
@@ -5169,7 +5269,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return this.fb.array(</span>
+            <span class="d2h-code-line-ctn">      );</span>
         </div>
     </td>
 </tr><tr>
@@ -5179,7 +5279,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      values.map(t =&gt; this.fb.group(t))</span>
+            <span class="d2h-code-line-ctn">    };</span>
         </div>
     </td>
 </tr><tr>
@@ -5189,7 +5289,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    );</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -5199,7 +5299,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
         </div>
     </td>
 </tr><tr>
@@ -5219,7 +5319,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  get authors(): FormArray {</span>
+            <span class="d2h-code-line-ctn">  private buildAuthorsArray(values: string[]): FormArray {</span>
         </div>
     </td>
 </tr><tr>
@@ -5229,7 +5329,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return this.bookForm.get(&#x27;authors&#x27;) as FormArray;</span>
+            <span class="d2h-code-line-ctn">    return this.fb.array(values, Validators.required);</span>
         </div>
     </td>
 </tr><tr>
@@ -5259,7 +5359,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  get thumbnails(): FormArray {</span>
+            <span class="d2h-code-line-ctn">  private buildThumbnailsArray(values: Thumbnail[]): FormArray {</span>
         </div>
     </td>
 </tr><tr>
@@ -5269,7 +5369,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return this.bookForm.get(&#x27;thumbnails&#x27;) as FormArray;</span>
+            <span class="d2h-code-line-ctn">    return this.fb.array(</span>
         </div>
     </td>
 </tr><tr>
@@ -5279,7 +5379,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">      values.map(t =&gt; this.fb.group(t))</span>
         </div>
     </td>
 </tr><tr>
@@ -5289,7 +5389,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
+            <span class="d2h-code-line-ctn">    );</span>
         </div>
     </td>
 </tr><tr>
@@ -5299,7 +5399,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  addAuthorControl() {</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -5309,7 +5409,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.authors.push(this.fb.control(&#x27;&#x27;));</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
         </div>
     </td>
 </tr><tr>
@@ -5319,7 +5419,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">  get authors(): FormArray {</span>
         </div>
     </td>
 </tr><tr>
@@ -5329,7 +5429,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
+            <span class="d2h-code-line-ctn">    return this.bookForm.get(&#x27;authors&#x27;) as FormArray;</span>
         </div>
     </td>
 </tr><tr>
@@ -5339,7 +5439,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  addThumbnailControl() {</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -5349,7 +5449,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.thumbnails.push(</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
         </div>
     </td>
 </tr><tr>
@@ -5359,7 +5459,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      this.fb.group({ url: &#x27;&#x27;, title: &#x27;&#x27; })</span>
+            <span class="d2h-code-line-ctn">  get thumbnails(): FormArray {</span>
         </div>
     </td>
 </tr><tr>
@@ -5369,7 +5469,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    );</span>
+            <span class="d2h-code-line-ctn">    return this.bookForm.get(&#x27;thumbnails&#x27;) as FormArray;</span>
         </div>
     </td>
 </tr><tr>
@@ -5399,7 +5499,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  submitForm() {</span>
+            <span class="d2h-code-line-ctn">  addAuthorControl() {</span>
         </div>
     </td>
 </tr><tr>
@@ -5409,7 +5509,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const formValue = this.bookForm.value;</span>
+            <span class="d2h-code-line-ctn">    this.authors.push(this.fb.control(&#x27;&#x27;));</span>
         </div>
     </td>
 </tr><tr>
@@ -5419,7 +5519,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    </span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -5429,7 +5529,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const authors = formValue.authors</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
         </div>
     </td>
 </tr><tr>
@@ -5439,7 +5539,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">              .filter((author: string) =&gt; author);</span>
+            <span class="d2h-code-line-ctn">  addThumbnailControl() {</span>
         </div>
     </td>
 </tr><tr>
@@ -5449,7 +5549,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const thumbnails = formValue.thumbnails</span>
+            <span class="d2h-code-line-ctn">    this.thumbnails.push(</span>
         </div>
     </td>
 </tr><tr>
@@ -5459,7 +5559,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">              .filter((thumbnail: Thumbnail) =&gt; thumbnail.url);</span>
+            <span class="d2h-code-line-ctn">      this.fb.group({ url: &#x27;&#x27;, title: &#x27;&#x27; })</span>
         </div>
     </td>
 </tr><tr>
@@ -5469,7 +5569,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
+            <span class="d2h-code-line-ctn">    );</span>
         </div>
     </td>
 </tr><tr>
@@ -5479,7 +5579,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const isbn = this.editing &amp;&amp; this.book ? this.book.isbn : formValue.isbn;</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -5499,7 +5599,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const newBook: Book = {</span>
+            <span class="d2h-code-line-ctn">  submitForm() {</span>
         </div>
     </td>
 </tr><tr>
@@ -5509,7 +5609,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      ...formValue,</span>
+            <span class="d2h-code-line-ctn">    const formValue = this.bookForm.value;</span>
         </div>
     </td>
 </tr><tr>
@@ -5519,7 +5619,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      isbn,</span>
+            <span class="d2h-code-line-ctn">    </span>
         </div>
     </td>
 </tr><tr>
@@ -5529,7 +5629,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      authors,</span>
+            <span class="d2h-code-line-ctn">    const authors = formValue.authors</span>
         </div>
     </td>
 </tr><tr>
@@ -5539,7 +5639,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      thumbnails</span>
+            <span class="d2h-code-line-ctn">              .filter((author: string) =&gt; author);</span>
         </div>
     </td>
 </tr><tr>
@@ -5549,7 +5649,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    };</span>
+            <span class="d2h-code-line-ctn">    const thumbnails = formValue.thumbnails</span>
         </div>
     </td>
 </tr><tr>
@@ -5559,7 +5659,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">&nbsp;</span>
+            <span class="d2h-code-line-ctn">              .filter((thumbnail: Thumbnail) =&gt; thumbnail.url);</span>
         </div>
     </td>
 </tr><tr>
@@ -5569,7 +5669,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.submitBook.emit(newBook);</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
         </div>
     </td>
 </tr><tr>
@@ -5579,7 +5679,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.bookForm.reset();</span>
+            <span class="d2h-code-line-ctn">    const isbn = this.book ? this.book.isbn : formValue.isbn;</span>
         </div>
     </td>
 </tr><tr>
@@ -5589,12 +5689,112 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      113
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    const newBook: Book = {</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      114
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      ...formValue,</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      115
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      isbn,</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      116
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      authors,</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      117
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      thumbnails</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      118
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    };</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      119
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">&nbsp;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      120
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    this.submitBook.emit(newBook);</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      121
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    this.bookForm.reset();</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      122
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
             <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      113
+      123
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
