@@ -55,7 +55,8 @@ export class BookFormComponent implements OnInit, OnChanges {
       thumbnails: this.buildThumbnailsArray([
         { title: '', url: '' }
       ]),
-      published: []
+      // ⚠️ Unterschied zum Buch: Wir haben den Validator ergänzt, denn das Datum muss immer angegeben werden.
+      published: [new Date(), [Validators.required]]
     });
   }
 

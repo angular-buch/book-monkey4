@@ -50,7 +50,7 @@ export class BookFormComponent implements OnInit, OnChanges {
       thumbnails: this.buildThumbnailsArray([
         { title: '', url: '' }
       ]),
-      published: []
+      published: [new Date(), [Validators.required]]
     });
   }
 
