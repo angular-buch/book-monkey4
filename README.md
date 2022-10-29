@@ -3,7 +3,7 @@
 Falls Sie eine andere Version des Buchs besitzen, finden Sie den Beispielcode in folgenden anderen Repositorys:
 > * [1. Auflage (2017): `book-monkey2`](https://github.com/angular-buch/book-monkey2)
 > * [2. Auflage (2019): `book-monkey3`](https://github.com/angular-buch/book-monkey3)
-> * [4. Auflage (2023): `book-monkey4`](https://github.com/angular-buch/book-monkey5)
+> * **[4. Auflage (2023): `book-monkey5`](https://github.com/angular-buch/book-monkey5)**
 
 
 # BookMonkey 4
